@@ -8,6 +8,9 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'Locus Admin',
   description: 'Manage exams, subjects, units, exercises and questions.',
+  icons: {
+    icon: '/logo.png', // 👈 favicon added
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

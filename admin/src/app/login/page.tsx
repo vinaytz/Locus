@@ -2,6 +2,7 @@
 
 import { useState, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
+import Image from 'next/image';
 import { toast } from 'sonner';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -46,8 +47,10 @@ function LoginPage() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-background p-6">
       <Card className="w-full max-w-md">
-        <CardHeader className="space-y-2 text-center">
-          <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-lg bg-primary text-primary-foreground font-black text-xl">L</div>
+        <CardHeader className="space-y-4 text-center">
+          <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-black p-2 ring-1 ring-white/10">
+            <Image src="/logo.png" alt="Locus" width={48} height={48} className="h-12 w-12 object-contain" />
+          </div>
           <CardTitle className="text-2xl">Locus Admin</CardTitle>
           <CardDescription>Sign in to manage your courses</CardDescription>
         </CardHeader>

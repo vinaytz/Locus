@@ -22,7 +22,7 @@
     },
     "android": {
       "package": "com.Locus",
-      "versionCode": 4,
+      "versionCode": 5,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#131F24"
