@@ -1,12 +1,13 @@
 'use client';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import {
   BookOpen,
   Boxes,
   GraduationCap,
   LayoutDashboard,
   ListTodo,
+  LogOut,
   PencilRuler,
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -22,10 +23,21 @@ const NAV = [
 
 export function Sidebar() {
   const path = usePathname();
+  const router = useRouter();
+
+  async function logout() {
+    await fetch('/api/auth/logout', { method: 'POST' });
+    router.push('/login');
+    router.refresh();
+  }
+
   return (
     <aside className="flex h-screen w-60 flex-col border-r bg-card">
       <div className="flex items-center gap-2 px-5 py-5 border-b">
-        <div className="flex h-8 w-8 items-center justify-center rounded-md bg-black text-primary-foreground font-black"><img src="/logo.png" alt="" /></div>
+        <div className="flex h-8 w-8 items-center justify-center rounded-md bg-black text-primary-foreground font-black overflow-hidden">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/logo.png" alt="" className="h-full w-full object-contain" />
+        </div>
         <div>
           <div className="text-sm font-semibold leading-none">Locus</div>
           <div className="text-xs text-muted-foreground">Admin Console</div>
@@ -52,8 +64,17 @@ export function Sidebar() {
           );
         })}
       </nav>
-      <div className="border-t px-4 py-3 text-xs text-muted-foreground">
-        v0.1 · connected to <span className="text-foreground">backend</span>
+      <div className="border-t px-3 py-3 space-y-2">
+        <button
+          onClick={logout}
+          className="flex w-full items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-accent-foreground"
+        >
+          <LogOut className="h-4 w-4" />
+          Sign out
+        </button>
+        <div className="px-1 text-xs text-muted-foreground">
+          v0.1 · connected to <span className="text-foreground">backend</span>
+        </div>
       </div>
     </aside>
   );
