@@ -25,7 +25,7 @@ export function Sidebar() {
   return (
     <aside className="flex h-screen w-60 flex-col border-r bg-card">
       <div className="flex items-center gap-2 px-5 py-5 border-b">
-        <div className="flex h-8 w-8 items-center justify-center rounded-md bg-primary text-primary-foreground font-black"><img src="/logo.png" alt="" /></div>
+        <div className="flex h-8 w-8 items-center justify-center rounded-md bg-black text-primary-foreground font-black"><img src="/logo.png" alt="" /></div>
         <div>
           <div className="text-sm font-semibold leading-none">Locus</div>
           <div className="text-xs text-muted-foreground">Admin Console</div>
