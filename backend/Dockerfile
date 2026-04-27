@@ -30,11 +30,10 @@ COPY --from=builder /app/dist ./dist
 COPY --from=builder /app/prisma ./prisma
 COPY package*.json ./
 COPY tsconfig.json ./
-# Keep ts-node + typescript installed so `npm run seed` works inside the
-# container (small footprint vs operational simplicity).
-RUN npm install --no-save ts-node typescript @types/node
+# Install ts-node globally so `npm run seed` works inside the container.
+RUN npm install -g ts-node typescript
 
 EXPOSE 3000
 ENTRYPOINT ["/sbin/tini", "--"]
 # Apply pending migrations on every start, then boot the API.
-CMD ["sh", "-c", "npx prisma migrate deploy && node dist/main.js"]
+CMD ["sh", "-c", "npx prisma migrate deploy && node dist/src/main.js"]
