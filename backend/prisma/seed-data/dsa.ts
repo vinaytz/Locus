@@ -1,0 +1,277 @@
+/**
+ * DSA (Data Structures & Algorithms) question bank.
+ * Levels: 1 = beginner, 2 = intermediate, 3 = advanced.
+ * Each Exercise = 8 easy + 2 medium = 10 questions.
+ */
+
+import type { SeedUnit } from '../seed-bank';
+import { mcq, fill, match, makeExercise } from '../seed-bank';
+
+export const DSA: Record<1 | 2 | 3, SeedUnit[]> = {
+  1: [
+    {
+      title: 'Arrays & Big-O Basics',
+      description: 'Array memory layout, indexing, and asymptotic notation.',
+      exercises: [
+        makeExercise('Arrays 101', [
+          mcq('Array index in C/C++/Java starts at:', ['-1', '0', '1', 'depends'], 1),
+          mcq('Time to access an element by index in an array:', ['O(n)', 'O(log n)', 'O(1)', 'O(n²)'], 2),
+          mcq('Arrays store elements in:', ['Linked nodes', 'Contiguous memory', 'Tree nodes', 'Hash buckets'], 1),
+          mcq('Inserting at the front of an array of n elements:', ['O(1)', 'O(log n)', 'O(n)', 'O(n²)'], 2),
+          mcq('Searching an unsorted array of size n in the worst case:', ['O(1)', 'O(log n)', 'O(n)', 'O(n log n)'], 2),
+          mcq('Best case of binary search:', ['O(n)', 'O(log n)', 'O(1)', 'O(n²)'], 2),
+          fill('Big-O describes ___ growth.', ['asymptotic']),
+          fill('Binary search requires the array to be ___.', ['sorted']),
+          mcq('A 2D array of size m×n stored row-major needs how many memory cells:', ['m+n', 'm·n', 'max(m,n)', 'm² + n²'], 1, 'medium'),
+          mcq('Which is faster asymptotically: O(n log n) or O(n²) for large n?', ['O(n²)', 'O(n log n)', 'Same', 'Depends on constants'], 1, 'medium'),
+        ]),
+        makeExercise('Big-O Practice', [
+          mcq('Two nested loops over n elements give:', ['O(n)', 'O(n²)', 'O(log n)', 'O(2ⁿ)'], 1),
+          mcq('Recursion that halves input each call:', ['O(n)', 'O(n²)', 'O(log n)', 'O(2ⁿ)'], 2),
+          mcq('Constant time operation:', ['Loop n times', 'Hash lookup average', 'Sort array', 'BFS'], 1),
+          mcq('O(1) space means:', ['No memory used', 'Memory does not grow with n', 'Always 1 byte', 'Memory grows linearly'], 1),
+          mcq('Which sort is O(n²) average:', ['Merge sort', 'Quick sort', 'Bubble sort', 'Heap sort'], 2),
+          mcq('Drop lower-order terms in Big-O because:', ['They\u2019re wrong', 'Constants dominate', 'Asymptotic behavior is dominated by highest order', 'Compilers remove them'], 2),
+          fill('O(2n + 5) simplifies to O(___).', ['n']),
+          match('Match algorithm with time:', ['Binary search', 'Linear search', 'Bubble sort'], ['O(log n)', 'O(n)', 'O(n²)'], { 'Binary search': 'O(log n)', 'Linear search': 'O(n)', 'Bubble sort': 'O(n²)' }),
+          mcq('A loop runs n + n/2 + n/4 + ... times. Total ≈', ['O(log n)', 'O(n)', 'O(n²)', 'O(2ⁿ)'], 1, 'medium'),
+          mcq('Recurrence T(n) = 2T(n/2) + n solves to:', ['O(n)', 'O(n log n)', 'O(n²)', 'O(2ⁿ)'], 1, 'medium'),
+        ]),
+      ],
+    },
+    {
+      title: 'Strings',
+      description: 'String storage, traversal, and basic problems.',
+      exercises: [
+        makeExercise('Strings Basics', [
+          mcq('In C, strings end with:', ['\\\\0', '\\\\n', '\\\\t', 'space'], 0),
+          mcq('Length of \"Hello\" (no null):', ['4', '5', '6', '7'], 1),
+          mcq('Are Python strings mutable?', ['Yes', 'No', 'Sometimes', 'Only if list'], 1),
+          mcq('Reversing a string of length n is:', ['O(1)', 'O(log n)', 'O(n)', 'O(n²)'], 2),
+          mcq('Concatenating two strings of length n in Python builds a new string of length:', ['n', '2n', 'n²', 'log n'], 1),
+          mcq('A palindrome reads the same:', ['Forwards only', 'Backwards only', 'Both ways', 'Never'], 2),
+          fill('A substring is a ___ contiguous sequence of characters.', ['']),
+          fill('Comparing two strings character-by-character is O(___).', ['n']),
+          mcq('Naive substring search is O(?):', ['n', 'n log n', 'n + m', 'n·m'], 3, 'medium'),
+          mcq('KMP improves naive search to O(?):', ['n', 'n + m', 'n·m', 'n²'], 1, 'medium'),
+        ]),
+      ],
+    },
+    {
+      title: 'Linked Lists',
+      description: 'Single & doubly linked lists, basic operations.',
+      exercises: [
+        makeExercise('Singly Linked List', [
+          mcq('Each node holds at minimum:', ['Data only', 'Pointer only', 'Data and a next pointer', 'Two pointers'], 2),
+          mcq('Insert at head of singly linked list:', ['O(1)', 'O(log n)', 'O(n)', 'O(n²)'], 0),
+          mcq('Search in singly linked list:', ['O(1)', 'O(log n)', 'O(n)', 'O(n²)'], 2),
+          mcq('Linked lists allow random access:', ['Always', 'Never (O(n) traversal)', 'Sometimes', 'Only sorted'], 1),
+          mcq('A circular linked list:', ['Has no end', 'Has only one node', 'Cannot be traversed', 'Has 2 heads'], 0),
+          mcq('Doubly linked node has:', ['Data + next', 'Data + prev + next', 'Data + 3 pointers', 'Just data'], 1),
+          fill('To delete a non-head node by reference in O(1) you can copy the ___ node\u2019s data.', ['next']),
+          fill('Linked lists are useful when ___ insertions are frequent.', ['middle']),
+          mcq('Detect cycle in linked list with O(1) space using:', ['Hash set', 'Floyd\u2019s tortoise & hare', 'Sorting', 'Stack'], 1, 'medium'),
+          mcq('Reverse a linked list iteratively in time/space:', ['O(n)/O(n)', 'O(n)/O(1)', 'O(n²)/O(1)', 'O(log n)/O(1)'], 1, 'medium'),
+        ]),
+      ],
+    },
+    {
+      title: 'Stacks & Queues',
+      description: 'LIFO/FIFO structures and their applications.',
+      exercises: [
+        makeExercise('Stacks & Queues Basics', [
+          mcq('Stack is:', ['FIFO', 'LIFO', 'Random', 'Sorted'], 1),
+          mcq('Queue is:', ['FIFO', 'LIFO', 'Random', 'Sorted'], 0),
+          mcq('Push/pop on a stack are typically:', ['O(n)', 'O(log n)', 'O(1)', 'O(n²)'], 2),
+          mcq('Browser back button typically uses a:', ['Queue', 'Stack', 'Tree', 'Hash'], 1),
+          mcq('Print queue in OS uses a:', ['Queue', 'Stack', 'Tree', 'Heap'], 0),
+          mcq('Which checks balanced parentheses?', ['Queue', 'Stack', 'Set', 'Tree'], 1),
+          fill('A deque allows insert/remove at ___ ends.', ['both']),
+          match('Match structure to use:', ['Undo feature', 'BFS', 'Bracket matching'], ['Stack', 'Queue', 'Stack'], { 'Undo feature': 'Stack', 'BFS': 'Queue', 'Bracket matching': 'Stack' }),
+          mcq('Implement a queue with two stacks: amortized push/pop is:', ['O(n)', 'O(log n)', 'O(1)', 'O(n log n)'], 2, 'medium'),
+          mcq('Stack overflow happens when:', ['Stack is empty', 'Pop on empty', 'Push beyond capacity', 'Top is null'], 2, 'medium'),
+        ]),
+      ],
+    },
+  ],
+
+  2: [
+    {
+      title: 'Hashing',
+      description: 'Hash tables, sets, and common problems.',
+      exercises: [
+        makeExercise('Hash Maps', [
+          mcq('Average lookup in a hash map:', ['O(1)', 'O(log n)', 'O(n)', 'O(n²)'], 0),
+          mcq('Worst case lookup in a hash map (with bad hash):', ['O(1)', 'O(log n)', 'O(n)', 'O(n²)'], 2),
+          mcq('Two values mapping to same slot is called:', ['Overflow', 'Collision', 'Conflict', 'Hash hit'], 1),
+          mcq('Open addressing handles collisions by:', ['Chaining', 'Probing', 'Resizing', 'Skipping'], 1),
+          mcq('Load factor = entries / ?', ['hash size', 'bucket count', 'capacity', 'collisions'], 2),
+          mcq('Java HashMap fallback for many collisions:', ['Tree', 'Heap', 'Sorted array', 'Linked list only'], 0),
+          fill('A good hash function distributes keys ___.', ['uniformly']),
+          fill('Set is a hash map without ___.', ['values']),
+          mcq('Two-sum with a hash map runs in:', ['O(n²)', 'O(n log n)', 'O(n)', 'O(log n)'], 2, 'medium'),
+          mcq('Anagram check via frequency map (length n):', ['O(n²)', 'O(n)', 'O(n log n)', 'O(1)'], 1, 'medium'),
+        ]),
+      ],
+    },
+    {
+      title: 'Trees',
+      description: 'Binary trees, BSTs, and traversals.',
+      exercises: [
+        makeExercise('Tree Traversals', [
+          mcq('Inorder traversal of BST gives:', ['Random order', 'Sorted order', 'Reverse order', 'Level order'], 1),
+          mcq('Pre-order visits node:', ['Before children', 'After children', 'Between children', 'Never'], 0),
+          mcq('Post-order visits node:', ['Before children', 'After children', 'Between children', 'Never'], 1),
+          mcq('Level-order traversal uses:', ['Stack', 'Queue', 'Heap', 'Set'], 1),
+          mcq('Height of a tree with one node:', ['-1', '0', '1', '2'], 1),
+          mcq('A complete binary tree of n nodes has height:', ['n', 'n/2', 'log n', '√n'], 2),
+          fill('A leaf node has ___ children.', ['no']),
+          fill('A binary tree node has at most ___ children.', ['two']),
+          mcq('In a BST, left subtree contains values that are:', ['Greater', 'Lesser', 'Equal', 'Random'], 1, 'medium'),
+          mcq('Search/insert in a balanced BST:', ['O(1)', 'O(log n)', 'O(n)', 'O(n²)'], 1, 'medium'),
+        ]),
+        makeExercise('BST Operations', [
+          mcq('Min of BST is at:', ['Rightmost', 'Leftmost', 'Root', 'Random'], 1),
+          mcq('Max of BST is at:', ['Rightmost', 'Leftmost', 'Root', 'Random'], 0),
+          mcq('Insertion in skewed BST worst case:', ['O(1)', 'O(log n)', 'O(n)', 'O(n²)'], 2),
+          mcq('AVL tree balance factor range:', ['{-1,0,1}', '{-2,2}', '{0..n}', '{0,1}'], 0),
+          mcq('Red-black tree guarantees height:', ['O(1)', 'O(log n)', 'O(n)', 'O(√n)'], 1),
+          mcq('Trie is best for:', ['Sorting', 'Prefix queries', 'Range sums', 'Graph BFS'], 1),
+          fill('In an AVL tree, height difference of subtrees \u2264 ___.', ['1']),
+          fill('Deletion from BST may require finding the in-order ___.', ['successor']),
+          mcq('Merging two BSTs of sizes n and m optimally:', ['O((n+m)²)', 'O((n+m) log (n+m))', 'O(n+m)', 'O(n·m)'], 2, 'medium'),
+          mcq('Lowest common ancestor in BST runs in:', ['O(1)', 'O(h)', 'O(n)', 'O(n log n)'], 1, 'medium'),
+        ]),
+      ],
+    },
+    {
+      title: 'Heaps & Priority Queues',
+      description: 'Binary heap operations and applications.',
+      exercises: [
+        makeExercise('Binary Heap', [
+          mcq('Min-heap root holds:', ['Max value', 'Min value', 'Median', 'Random'], 1),
+          mcq('Insertion in a heap is:', ['O(1)', 'O(log n)', 'O(n)', 'O(n²)'], 1),
+          mcq('Extract-min is:', ['O(1)', 'O(log n)', 'O(n)', 'O(n²)'], 1),
+          mcq('Heap is typically stored as:', ['Linked list', 'Hash table', 'Array', 'Tree of nodes'], 2),
+          mcq('Index of left child of i in 0-indexed heap:', ['i+1', '2i', '2i+1', '2i+2'], 2),
+          mcq('Index of parent of i (0-indexed):', ['(i-1)/2', '(i+1)/2', '2i+1', 'i/2'], 0),
+          fill('Building a heap from an array runs in O(___).', ['n']),
+          fill('Heap sort runs in O(___).', ['n log n']),
+          mcq('Top-K largest from n elements with min-heap of size K:', ['O(n²)', 'O(n log K)', 'O(K log n)', 'O(K²)'], 1, 'medium'),
+          mcq('Priority queue is naturally implemented with:', ['Stack', 'Heap', 'Set', 'Trie'], 1, 'medium'),
+        ]),
+      ],
+    },
+    {
+      title: 'Graphs Intro',
+      description: 'Representations and basic traversals.',
+      exercises: [
+        makeExercise('Graphs Basics', [
+          mcq('Adjacency list space for V nodes, E edges:', ['O(V²)', 'O(V+E)', 'O(E²)', 'O(log V)'], 1),
+          mcq('Adjacency matrix space:', ['O(V)', 'O(V+E)', 'O(V²)', 'O(E²)'], 2),
+          mcq('BFS explores nodes by:', ['Depth', 'Level', 'Random', 'Weight'], 1),
+          mcq('DFS uses (recursive):', ['Queue', 'Stack', 'Heap', 'Set'], 1),
+          mcq('Cycle in undirected graph can be detected by:', ['Topological sort', 'DFS with parent check', 'BFS only', 'Heap'], 1),
+          mcq('Dijkstra requires edges to be:', ['Negative', 'Non-negative', 'Equal', 'Integer only'], 1),
+          fill('A connected graph with no cycles is a ___.', ['tree']),
+          fill('Topological sort applies to ___ graphs.', ['DAG']),
+          mcq('Single-source shortest path on unweighted graph:', ['Dijkstra', 'Bellman-Ford', 'BFS', 'DFS'], 2, 'medium'),
+          mcq('Time of BFS:', ['O(V·E)', 'O(V+E)', 'O(V²)', 'O(E²)'], 1, 'medium'),
+        ]),
+      ],
+    },
+  ],
+
+  3: [
+    {
+      title: 'Dynamic Programming',
+      description: 'Memoization, tabulation and classic DPs.',
+      exercises: [
+        makeExercise('Foundations of DP', [
+          mcq('DP is useful when problem has:', ['No structure', 'Optimal substructure & overlapping subproblems', 'Random data', 'Only sorted input'], 1),
+          mcq('Top-down DP uses:', ['Iteration only', 'Memoization', 'Greedy', 'Divide & conquer only'], 1),
+          mcq('Bottom-up DP uses:', ['Recursion only', 'Tabulation', 'Random', 'Greedy'], 1),
+          mcq('Fibonacci with memoization is:', ['O(2ⁿ)', 'O(n)', 'O(n log n)', 'O(n²)'], 1),
+          mcq('Coin change (min coins) is:', ['Greedy always', 'DP', 'Sorting', 'BFS only'], 1),
+          mcq('LIS naive is O(2ⁿ); DP gives:', ['O(n)', 'O(n log n)', 'O(n²)', 'O(n³)'], 2),
+          fill('LIS with patience sort runs in O(n ___).', ['log n']),
+          fill('Knapsack (0/1) DP is O(n·___).', ['W']),
+          mcq('LCS of strings of lengths m, n in DP:', ['O(m+n)', 'O(m·n)', 'O(m·n²)', 'O(2ⁿ)'], 1, 'medium'),
+          mcq('Edit distance DP space can be reduced from O(m·n) to:', ['O(1)', 'O(n)', 'O(m+n)', 'O(m·n)'], 1, 'medium'),
+        ]),
+        makeExercise('Classic DP Problems', [
+          mcq('Subset sum (capacity W, n items) runs in:', ['O(n+W)', 'O(n·W)', 'O(n²)', 'O(2ⁿ)'], 1),
+          mcq('Matrix chain multiplication minimum scalar mults DP:', ['O(n)', 'O(n²)', 'O(n³)', 'O(2ⁿ)'], 2),
+          mcq('Rod cutting DP is:', ['O(n)', 'O(n log n)', 'O(n²)', 'O(2ⁿ)'], 2),
+          mcq('Word break with DP/trie is:', ['O(2ⁿ)', 'O(n²) usually', 'O(n)', 'O(n!)'], 1),
+          mcq('Number of ways DP often involves:', ['Sum over choices', 'Product only', 'Subtraction', 'Sorting'], 0),
+          mcq('Greedy fails for 0/1 knapsack but works for fractional:', ['False', 'True', 'Sometimes', 'Only when sorted'], 1),
+          fill('LCS is symmetric: LCS(a,b) = LCS(b, ___).', ['a']),
+          fill('Catalan number C(n) counts ___ binary trees.', ['unique']),
+          mcq('Bitmask DP for Hamiltonian path on n vertices:', ['O(2ⁿ · n)', 'O(n²)', 'O(n!)', 'O(2ⁿ · n²)'], 3, 'medium'),
+          mcq('Longest palindromic subsequence reduces to:', ['LIS', 'LCS of s and reverse(s)', 'Hashing', 'Suffix array'], 1, 'medium'),
+        ]),
+      ],
+    },
+    {
+      title: 'Graph Algorithms',
+      description: 'Shortest paths, MSTs, flows.',
+      exercises: [
+        makeExercise('Shortest Paths', [
+          mcq('Dijkstra with binary heap:', ['O(V²)', 'O((V+E) log V)', 'O(V·E)', 'O(E²)'], 1),
+          mcq('Bellman-Ford handles:', ['Only positive edges', 'Negative edges', 'Floats only', 'DAGs only'], 1),
+          mcq('Bellman-Ford complexity:', ['O(V+E)', 'O(V·E)', 'O(V² log V)', 'O(E²)'], 1),
+          mcq('All-pairs shortest paths via Floyd-Warshall:', ['O(V²)', 'O(V³)', 'O(V·E)', 'O(E²)'], 1),
+          mcq('A* uses:', ['Heuristic', 'Random', 'Greedy only', 'BFS only'], 0),
+          mcq('Topological order is unique iff:', ['Graph is DAG', 'Hamiltonian path exists', 'Graph has cycles', 'Always'], 1),
+          fill('Negative cycle detection is possible with ___.', ['Bellman-Ford']),
+          fill('Shortest path on DAG runs in O(___).', ['V+E']),
+          mcq('Johnson\u2019s algorithm complexity:', ['O(V²)', 'O(V·E·log V) approx', 'O(V·E)', 'O(E²)'], 1, 'medium'),
+          mcq('Single-source longest path is hard in general because problem is:', ['NP-hard', 'Polynomial', 'Linear', 'Constant'], 0, 'medium'),
+        ]),
+        makeExercise('MST & Flow', [
+          mcq('Kruskal uses:', ['DFS', 'BFS', 'Union-Find', 'Heap only'], 2),
+          mcq('Prim with heap:', ['O(V²)', 'O((V+E) log V)', 'O(V·E)', 'O(E²)'], 1),
+          mcq('MST is unique iff:', ['Graph is connected', 'Edge weights are distinct', 'V is even', 'Always'], 1),
+          mcq('Max-flow equals:', ['Min-cut', 'Max-cut', 'Sum of edges', 'Number of paths'], 0),
+          mcq('Ford-Fulkerson with BFS is called:', ['Edmonds-Karp', 'Dinic', 'Hopcroft', 'Karger'], 0),
+          mcq('Dinic\u2019s algorithm complexity (general):', ['O(V·E)', 'O(V²·E)', 'O(V·E²)', 'O(E²)'], 1),
+          fill('Bipartite matching reduces to ___ flow.', ['max']),
+          fill('Strongly connected components: Tarjan or ___.', ['Kosaraju']),
+          mcq('Articulation points found via:', ['BFS', 'DFS with low-link', 'Union-Find', 'Heap'], 1, 'medium'),
+          mcq('A graph has Eulerian circuit iff:', ['All vertices even-degree & connected', 'Bipartite', 'DAG', 'Tree'], 0, 'medium'),
+        ]),
+      ],
+    },
+    {
+      title: 'Advanced Structures',
+      description: 'Segment trees, Fenwick trees, tries, union-find.',
+      exercises: [
+        makeExercise('Range Queries', [
+          mcq('Segment tree update/query:', ['O(1)', 'O(log n)', 'O(n)', 'O(n log n)'], 1),
+          mcq('Fenwick (BIT) update/query:', ['O(1)', 'O(log n)', 'O(n)', 'O(n log n)'], 1),
+          mcq('Build segment tree:', ['O(log n)', 'O(n)', 'O(n log n)', 'O(n²)'], 1),
+          mcq('Lazy propagation handles:', ['Point updates', 'Range updates', 'Hashing', 'Sorting'], 1),
+          mcq('Sparse table best for:', ['Static range min/max', 'Updates', 'Hashing', 'Sorting'], 0),
+          mcq('Sparse table query:', ['O(1)', 'O(log n)', 'O(n)', 'O(n log n)'], 0),
+          fill('Segment tree uses about ___n memory.', ['4']),
+          fill('BIT cannot easily support arbitrary range ___.', ['min']),
+          mcq('Persistent segment tree adds:', ['O(1) per update', 'O(log n) per update with versioning', 'O(n) per update', 'No change'], 1, 'medium'),
+          mcq('2D BIT update/query:', ['O(log n)', 'O((log n)²)', 'O(n)', 'O(n log n)'], 1, 'medium'),
+        ]),
+        makeExercise('Tries & DSU', [
+          mcq('Trie insert for word length L:', ['O(1)', 'O(L)', 'O(n)', 'O(n L)'], 1),
+          mcq('Trie best for:', ['Sorting', 'Prefix queries', 'Hashing', 'Range sums'], 1),
+          mcq('Union-Find with rank + path compression nearly:', ['O(1)', 'O(log n)', 'O(α(n))', 'O(n)'], 2),
+          mcq('Union by rank prevents:', ['Cycles', 'Skewed trees', 'Hash collisions', 'Negative weights'], 1),
+          mcq('DSU primarily supports:', ['Find & Union', 'Insert', 'Sort', 'BFS'], 0),
+          mcq('Trie size is O(?):', ['L', 'sum of lengths', 'n²', 'log n'], 1),
+          fill('Aho-Corasick builds an automaton from a ___.', ['trie']),
+          fill('DSU is ideal for Kruskal\u2019s ___ algorithm.', ['MST']),
+          mcq('Compressed trie (radix tree) reduces memory by:', ['Hashing', 'Path compression', 'Lazy delete', 'Splaying'], 1, 'medium'),
+          mcq('Counting connected components dynamically as edges are added:', ['Heap', 'DSU', 'Trie', 'Segment tree'], 1, 'medium'),
+        ]),
+      ],
+    },
+  ],
+};

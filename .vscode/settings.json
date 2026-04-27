@@ -1,0 +1,12 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^bash /tmp/locus-smoke\\.sh 2>&1 \\| tail -120$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^curl -sv http://localhost:3000/api/stats -H \"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9\\.eyJzdWIiOiJjbW9nZHlvdjYwMDAwb284bDcxMG5pM2ozIiwiZW1haWwiOiJzbW9rZUBsb2N1cy5hcHAiLCJpYXQiOjE3NzcyNDUzMzIsImV4cCI6MTc3Nzg1MDEzMn0\\.f2yR-HutvsAQP51mdkWIPn0VVqYcT2G0OMGodkXJaA8\" 2>&1 \\| tail -20$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}

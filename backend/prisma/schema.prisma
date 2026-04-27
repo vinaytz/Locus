@@ -1,0 +1,237 @@
+// Locus backend Prisma schema (SQLite)
+// Implements:
+//  - Auth (User)
+//  - Courses (Exam, Subject, Unit, Exercise, Question) — schema based on
+//    Helper/Scalable MCQ App Database Architecture.md
+//  - Onboarding (UserExamEnrollment, UserSubjectEnrollment)
+//  - Gamification (UserStats, ExerciseAttempt, DiamondLedger)
+//  - Leaderboard (LeaderboardGroup, LeaderboardParticipant)
+//
+// SQLite has no JSONB or arrays, so:
+//  - Question.content is TEXT (JSON-stringified payload)
+//  - Enums are modelled as String + CHECK-equivalent in code
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// ---------- AUTH / USER ----------------------------------------------------
+model User {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  passwordHash String
+  displayName  String
+  timezone     String   @default("UTC")
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  stats              UserStats?
+  examEnrollments    UserExamEnrollment[]
+  subjectEnrollments UserSubjectEnrollment[]
+  attempts           ExerciseAttempt[]
+  diamondLedger      DiamondLedger[]
+  participations     LeaderboardParticipant[]
+}
+
+// ---------- COURSES --------------------------------------------------------
+model Subject {
+  id          String  @id @default(cuid())
+  slug        String  @unique
+  name        String                       // base name e.g. "Physics"
+  level       Int                          // 1=foundation, 2=intermediate, 3=advanced
+  displayName String                       // "Physics 1"
+  icon        String?
+  description String?
+  createdAt   DateTime @default(now())
+
+  units             Unit[]
+  examLinks         ExamSubject[]
+  enrollments       UserSubjectEnrollment[]
+
+  @@unique([name, level])
+  @@index([level])
+}
+
+model Unit {
+  id          String  @id @default(cuid())
+  subjectId   String
+  title       String
+  orderIndex  Int     @default(0)
+  description String?
+
+  subject   Subject    @relation(fields: [subjectId], references: [id], onDelete: Cascade)
+  exercises Exercise[]
+
+  @@index([subjectId])
+}
+
+model Exercise {
+  id         String @id @default(cuid())
+  unitId     String
+  title      String
+  duration   Int    @default(5)   // minutes
+  points     Int    @default(20)  // base XP awarded on completion
+  orderIndex Int    @default(0)
+
+  unit      Unit              @relation(fields: [unitId], references: [id], onDelete: Cascade)
+  questions Question[]
+  attempts  ExerciseAttempt[]
+
+  @@index([unitId])
+}
+
+model Question {
+  id          String @id @default(cuid())
+  exerciseId  String
+  type        String  // 'MCQ' | 'MATCH' | 'REORDER' | 'COMPLETE' | 'TRANSLATE'
+  prompt      String
+  difficulty  String @default("easy")  // easy | medium | hard
+  points      Int    @default(10)
+  content     String // JSON-stringified payload
+  explanation String?
+
+  exercise Exercise @relation(fields: [exerciseId], references: [id], onDelete: Cascade)
+
+  @@index([exerciseId])
+  @@index([type])
+}
+
+model Exam {
+  id          String  @id @default(cuid())
+  slug        String  @unique
+  title       String
+  description String?
+  createdAt   DateTime @default(now())
+
+  subjects    ExamSubject[]
+  enrollments UserExamEnrollment[]
+}
+
+model ExamSubject {
+  examId     String
+  subjectId  String
+  orderIndex Int     @default(0)
+
+  exam    Exam    @relation(fields: [examId], references: [id], onDelete: Cascade)
+  subject Subject @relation(fields: [subjectId], references: [id], onDelete: Cascade)
+
+  @@id([examId, subjectId])
+  @@index([subjectId])
+}
+
+// ---------- ONBOARDING -----------------------------------------------------
+// One-of (exam-based) flow: user chose an Exam and provides the date of exam.
+model UserExamEnrollment {
+  id        String   @id @default(cuid())
+  userId    String
+  examId    String
+  examDate  DateTime
+  createdAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  exam Exam @relation(fields: [examId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, examId])
+  @@index([userId])
+}
+
+// One-of (subject-based) flow: user chose a Subject and a difficulty (1/2/3).
+// Difficulty is stored numerically per the spec ("save it like 1 or 2 or 3").
+model UserSubjectEnrollment {
+  id         String   @id @default(cuid())
+  userId     String
+  subjectId  String
+  difficulty Int      // 1 = enjoy, 2 = pro, 3 = expert
+  createdAt  DateTime @default(now())
+
+  user    User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  subject Subject @relation(fields: [subjectId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, subjectId])
+  @@index([userId])
+}
+
+// ---------- GAMIFICATION ---------------------------------------------------
+model UserStats {
+  userId             String   @id
+  totalXp            Int      @default(0)
+  diamonds           Int      @default(0)
+  hearts             Int      @default(5)   // 0..MAX_HEARTS (gameplay lives)
+  lastHeartRefillAt  DateTime?              // anchor for time-based regen (null when full)
+  currentLeagueIndex Int      @default(1)   // 1..30
+  currentStreak      Int      @default(0)
+  longestStreak      Int      @default(0)
+  lastActivityDate   DateTime?              // Date-only conceptually (UTC midnight per user TZ)
+  updatedAt          DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+// Records each exercise completion for analytics + perfect-score detection.
+model ExerciseAttempt {
+  id            String   @id @default(cuid())
+  userId        String
+  exerciseId    String
+  correctCount  Int
+  totalCount    Int
+  scorePct      Int      // 0..100
+  xpAwarded     Int
+  diamondsAwarded Int    @default(0)
+  isPerfect     Boolean
+  createdAt     DateTime @default(now())
+
+  user     User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  exercise Exercise @relation(fields: [exerciseId], references: [id], onDelete: Cascade)
+
+  @@index([userId, createdAt])
+  @@index([exerciseId])
+}
+
+model DiamondLedger {
+  id        String   @id @default(cuid())
+  userId    String
+  delta     Int                              // +/- diamonds
+  reason    String                           // 'UNIT_COMPLETION' | 'STREAK_7' | 'PURCHASE' | ...
+  refId     String?                          // optional FK target id (unit, etc.)
+  createdAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, createdAt])
+}
+
+// ---------- LEADERBOARD ----------------------------------------------------
+model LeaderboardGroup {
+  id          String   @id @default(cuid())
+  leagueTier  Int      // 1..30
+  state       String   @default("WAITING")   // WAITING | ACTIVE | CLOSED
+  capacity    Int      @default(12)
+  filledCount Int      @default(0)
+  startedAt   DateTime?
+  endsAt      DateTime?
+  createdAt   DateTime @default(now())
+
+  participants LeaderboardParticipant[]
+
+  @@index([leagueTier, state])
+}
+
+model LeaderboardParticipant {
+  id         String   @id @default(cuid())
+  groupId    String
+  userId     String
+  seasonXp   Int      @default(0)
+  joinedAt   DateTime @default(now())
+  lastXpAt   DateTime?
+
+  group LeaderboardGroup @relation(fields: [groupId], references: [id], onDelete: Cascade)
+  user  User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([groupId, userId])
+  @@index([userId])
+}

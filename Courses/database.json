@@ -1,0 +1,4039 @@
+{
+  "subjects": [
+    {
+      "id": "subj:physics",
+      "name": "Physics",
+      "slug": "physics",
+      "icon": "atom",
+      "description": "Mechanics, waves, electromagnetism and modern physics."
+    },
+    {
+      "id": "subj:chemistry",
+      "name": "Chemistry",
+      "slug": "chemistry",
+      "icon": "flask",
+      "description": "Physical, inorganic and organic chemistry."
+    },
+    {
+      "id": "subj:biology",
+      "name": "Biology",
+      "slug": "biology",
+      "icon": "leaf",
+      "description": "Cells, genetics, physiology and ecology."
+    },
+    {
+      "id": "subj:mathematics",
+      "name": "Mathematics",
+      "slug": "mathematics",
+      "icon": "sigma",
+      "description": "Algebra, calculus, geometry and statistics."
+    },
+    {
+      "id": "subj:computer-science",
+      "name": "Computer Science",
+      "slug": "computer-science",
+      "icon": "laptop-code",
+      "description": "Programming, data structures, algorithms and systems."
+    },
+    {
+      "id": "subj:english",
+      "name": "English",
+      "slug": "english",
+      "icon": "book",
+      "description": "Grammar, vocabulary and comprehension."
+    },
+    {
+      "id": "subj:general-knowledge",
+      "name": "General Knowledge",
+      "slug": "general-knowledge",
+      "icon": "globe",
+      "description": "World affairs, science and culture."
+    },
+    {
+      "id": "subj:reasoning",
+      "name": "Reasoning",
+      "slug": "reasoning",
+      "icon": "brain",
+      "description": "Logical and analytical reasoning."
+    },
+    {
+      "id": "subj:history",
+      "name": "History",
+      "slug": "history",
+      "icon": "scroll",
+      "description": "World and Indian history."
+    },
+    {
+      "id": "subj:geography",
+      "name": "Geography",
+      "slug": "geography",
+      "icon": "map",
+      "description": "Physical and human geography."
+    }
+  ],
+  "units": [
+    {
+      "id": "unit:physics:kinematics",
+      "subject_id": "subj:physics",
+      "title": "Kinematics",
+      "order_index": 0,
+      "description": "Motion in one and two dimensions."
+    },
+    {
+      "id": "unit:physics:laws-of-motion",
+      "subject_id": "subj:physics",
+      "title": "Laws of Motion",
+      "order_index": 1,
+      "description": "Newton's laws and applications."
+    },
+    {
+      "id": "unit:physics:electromagnetism",
+      "subject_id": "subj:physics",
+      "title": "Electromagnetism",
+      "order_index": 2,
+      "description": "Charges, currents and fields."
+    },
+    {
+      "id": "unit:chemistry:atomic-structure",
+      "subject_id": "subj:chemistry",
+      "title": "Atomic Structure",
+      "order_index": 0,
+      "description": null
+    },
+    {
+      "id": "unit:chemistry:periodic-table",
+      "subject_id": "subj:chemistry",
+      "title": "Periodic Table",
+      "order_index": 1,
+      "description": null
+    },
+    {
+      "id": "unit:chemistry:organic-basics",
+      "subject_id": "subj:chemistry",
+      "title": "Organic Basics",
+      "order_index": 2,
+      "description": null
+    },
+    {
+      "id": "unit:chemistry:chemical-bonding",
+      "subject_id": "subj:chemistry",
+      "title": "Chemical Bonding",
+      "order_index": 3,
+      "description": null
+    },
+    {
+      "id": "unit:biology:cell-biology",
+      "subject_id": "subj:biology",
+      "title": "Cell Biology",
+      "order_index": 0,
+      "description": null
+    },
+    {
+      "id": "unit:biology:genetics",
+      "subject_id": "subj:biology",
+      "title": "Genetics",
+      "order_index": 1,
+      "description": null
+    },
+    {
+      "id": "unit:biology:human-physiology",
+      "subject_id": "subj:biology",
+      "title": "Human Physiology",
+      "order_index": 2,
+      "description": null
+    },
+    {
+      "id": "unit:mathematics:algebra",
+      "subject_id": "subj:mathematics",
+      "title": "Algebra",
+      "order_index": 0,
+      "description": null
+    },
+    {
+      "id": "unit:mathematics:calculus",
+      "subject_id": "subj:mathematics",
+      "title": "Calculus",
+      "order_index": 1,
+      "description": null
+    },
+    {
+      "id": "unit:mathematics:trigonometry",
+      "subject_id": "subj:mathematics",
+      "title": "Trigonometry",
+      "order_index": 2,
+      "description": null
+    },
+    {
+      "id": "unit:mathematics:probability",
+      "subject_id": "subj:mathematics",
+      "title": "Probability",
+      "order_index": 3,
+      "description": null
+    },
+    {
+      "id": "unit:computer-science:programming-fundamentals",
+      "subject_id": "subj:computer-science",
+      "title": "Programming Fundamentals",
+      "order_index": 0,
+      "description": null
+    },
+    {
+      "id": "unit:computer-science:data-structures",
+      "subject_id": "subj:computer-science",
+      "title": "Data Structures",
+      "order_index": 1,
+      "description": null
+    },
+    {
+      "id": "unit:computer-science:algorithms",
+      "subject_id": "subj:computer-science",
+      "title": "Algorithms",
+      "order_index": 2,
+      "description": null
+    },
+    {
+      "id": "unit:computer-science:operating-systems",
+      "subject_id": "subj:computer-science",
+      "title": "Operating Systems",
+      "order_index": 3,
+      "description": null
+    },
+    {
+      "id": "unit:english:grammar",
+      "subject_id": "subj:english",
+      "title": "Grammar",
+      "order_index": 0,
+      "description": null
+    },
+    {
+      "id": "unit:english:vocabulary",
+      "subject_id": "subj:english",
+      "title": "Vocabulary",
+      "order_index": 1,
+      "description": null
+    },
+    {
+      "id": "unit:english:comprehension",
+      "subject_id": "subj:english",
+      "title": "Comprehension",
+      "order_index": 2,
+      "description": null
+    },
+    {
+      "id": "unit:general-knowledge:world-capitals",
+      "subject_id": "subj:general-knowledge",
+      "title": "World Capitals",
+      "order_index": 0,
+      "description": null
+    },
+    {
+      "id": "unit:general-knowledge:science-trivia",
+      "subject_id": "subj:general-knowledge",
+      "title": "Science Trivia",
+      "order_index": 1,
+      "description": null
+    },
+    {
+      "id": "unit:general-knowledge:sports",
+      "subject_id": "subj:general-knowledge",
+      "title": "Sports",
+      "order_index": 2,
+      "description": null
+    },
+    {
+      "id": "unit:reasoning:verbal-reasoning",
+      "subject_id": "subj:reasoning",
+      "title": "Verbal Reasoning",
+      "order_index": 0,
+      "description": null
+    },
+    {
+      "id": "unit:reasoning:non-verbal",
+      "subject_id": "subj:reasoning",
+      "title": "Non-Verbal",
+      "order_index": 1,
+      "description": null
+    },
+    {
+      "id": "unit:reasoning:logical-puzzles",
+      "subject_id": "subj:reasoning",
+      "title": "Logical Puzzles",
+      "order_index": 2,
+      "description": null
+    },
+    {
+      "id": "unit:history:ancient-history",
+      "subject_id": "subj:history",
+      "title": "Ancient History",
+      "order_index": 0,
+      "description": null
+    },
+    {
+      "id": "unit:history:medieval-history",
+      "subject_id": "subj:history",
+      "title": "Medieval History",
+      "order_index": 1,
+      "description": null
+    },
+    {
+      "id": "unit:history:modern-history",
+      "subject_id": "subj:history",
+      "title": "Modern History",
+      "order_index": 2,
+      "description": null
+    },
+    {
+      "id": "unit:geography:physical-geography",
+      "subject_id": "subj:geography",
+      "title": "Physical Geography",
+      "order_index": 0,
+      "description": null
+    },
+    {
+      "id": "unit:geography:world-geography",
+      "subject_id": "subj:geography",
+      "title": "World Geography",
+      "order_index": 1,
+      "description": null
+    },
+    {
+      "id": "unit:geography:indian-geography",
+      "subject_id": "subj:geography",
+      "title": "Indian Geography",
+      "order_index": 2,
+      "description": null
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex:physics:kinematics:motion-basics",
+      "unit_id": "unit:physics:kinematics",
+      "title": "Motion Basics",
+      "duration": 5,
+      "points": 15,
+      "order_index": 0
+    },
+    {
+      "id": "ex:physics:kinematics:projectile-motion",
+      "unit_id": "unit:physics:kinematics",
+      "title": "Projectile Motion",
+      "duration": 6,
+      "points": 15,
+      "order_index": 1
+    },
+    {
+      "id": "ex:physics:laws-of-motion:newton-s-laws",
+      "unit_id": "unit:physics:laws-of-motion",
+      "title": "Newton's Laws",
+      "duration": 5,
+      "points": 15,
+      "order_index": 0
+    },
+    {
+      "id": "ex:physics:laws-of-motion:friction-circular-motion",
+      "unit_id": "unit:physics:laws-of-motion",
+      "title": "Friction & Circular Motion",
+      "duration": 6,
+      "points": 15,
+      "order_index": 1
+    },
+    {
+      "id": "ex:physics:electromagnetism:electrostatics",
+      "unit_id": "unit:physics:electromagnetism",
+      "title": "Electrostatics",
+      "duration": 5,
+      "points": 15,
+      "order_index": 0
+    },
+    {
+      "id": "ex:chemistry:atomic-structure:atoms-quantum-numbers",
+      "unit_id": "unit:chemistry:atomic-structure",
+      "title": "Atoms & Quantum Numbers",
+      "duration": 5,
+      "points": 15,
+      "order_index": 0
+    },
+    {
+      "id": "ex:chemistry:periodic-table:periodic-trends",
+      "unit_id": "unit:chemistry:periodic-table",
+      "title": "Periodic Trends",
+      "duration": 5,
+      "points": 15,
+      "order_index": 0
+    },
+    {
+      "id": "ex:chemistry:organic-basics:hydrocarbons",
+      "unit_id": "unit:chemistry:organic-basics",
+      "title": "Hydrocarbons",
+      "duration": 5,
+      "points": 15,
+      "order_index": 0
+    },
+    {
+      "id": "ex:chemistry:chemical-bonding:bonds-geometry",
+      "unit_id": "unit:chemistry:chemical-bonding",
+      "title": "Bonds & Geometry",
+      "duration": 5,
+      "points": 15,
+      "order_index": 0
+    },
+    {
+      "id": "ex:biology:cell-biology:the-cell",
+      "unit_id": "unit:biology:cell-biology",
+      "title": "The Cell",
+      "duration": 5,
+      "points": 15,
+      "order_index": 0
+    },
+    {
+      "id": "ex:biology:genetics:mendelian-genetics",
+      "unit_id": "unit:biology:genetics",
+      "title": "Mendelian Genetics",
+      "duration": 5,
+      "points": 15,
+      "order_index": 0
+    },
+    {
+      "id": "ex:biology:human-physiology:systems",
+      "unit_id": "unit:biology:human-physiology",
+      "title": "Systems",
+      "duration": 5,
+      "points": 15,
+      "order_index": 0
+    },
+    {
+      "id": "ex:mathematics:algebra:equations",
+      "unit_id": "unit:mathematics:algebra",
+      "title": "Equations",
+      "duration": 5,
+      "points": 15,
+      "order_index": 0
+    },
+    {
+      "id": "ex:mathematics:calculus:limits-derivatives",
+      "unit_id": "unit:mathematics:calculus",
+      "title": "Limits & Derivatives",
+      "duration": 5,
+      "points": 15,
+      "order_index": 0
+    },
+    {
+      "id": "ex:mathematics:trigonometry:identities",
+      "unit_id": "unit:mathematics:trigonometry",
+      "title": "Identities",
+      "duration": 5,
+      "points": 15,
+      "order_index": 0
+    },
+    {
+      "id": "ex:mathematics:probability:basics",
+      "unit_id": "unit:mathematics:probability",
+      "title": "Basics",
+      "duration": 5,
+      "points": 15,
+      "order_index": 0
+    },
+    {
+      "id": "ex:computer-science:programming-fundamentals:python-basics",
+      "unit_id": "unit:computer-science:programming-fundamentals",
+      "title": "Python Basics",
+      "duration": 5,
+      "points": 15,
+      "order_index": 0
+    },
+    {
+      "id": "ex:computer-science:data-structures:linear-structures",
+      "unit_id": "unit:computer-science:data-structures",
+      "title": "Linear Structures",
+      "duration": 5,
+      "points": 15,
+      "order_index": 0
+    },
+    {
+      "id": "ex:computer-science:data-structures:trees-graphs",
+      "unit_id": "unit:computer-science:data-structures",
+      "title": "Trees & Graphs",
+      "duration": 6,
+      "points": 15,
+      "order_index": 1
+    },
+    {
+      "id": "ex:computer-science:algorithms:sorting-searching",
+      "unit_id": "unit:computer-science:algorithms",
+      "title": "Sorting & Searching",
+      "duration": 5,
+      "points": 15,
+      "order_index": 0
+    },
+    {
+      "id": "ex:computer-science:operating-systems:processes-memory",
+      "unit_id": "unit:computer-science:operating-systems",
+      "title": "Processes & Memory",
+      "duration": 5,
+      "points": 15,
+      "order_index": 0
+    },
+    {
+      "id": "ex:english:grammar:tenses-parts-of-speech",
+      "unit_id": "unit:english:grammar",
+      "title": "Tenses & Parts of Speech",
+      "duration": 5,
+      "points": 15,
+      "order_index": 0
+    },
+    {
+      "id": "ex:english:vocabulary:synonyms-antonyms",
+      "unit_id": "unit:english:vocabulary",
+      "title": "Synonyms & Antonyms",
+      "duration": 5,
+      "points": 15,
+      "order_index": 0
+    },
+    {
+      "id": "ex:english:comprehension:reading-skills",
+      "unit_id": "unit:english:comprehension",
+      "title": "Reading Skills",
+      "duration": 5,
+      "points": 15,
+      "order_index": 0
+    },
+    {
+      "id": "ex:general-knowledge:world-capitals:capitals-countries",
+      "unit_id": "unit:general-knowledge:world-capitals",
+      "title": "Capitals & Countries",
+      "duration": 5,
+      "points": 15,
+      "order_index": 0
+    },
+    {
+      "id": "ex:general-knowledge:science-trivia:discoveries",
+      "unit_id": "unit:general-knowledge:science-trivia",
+      "title": "Discoveries",
+      "duration": 5,
+      "points": 15,
+      "order_index": 0
+    },
+    {
+      "id": "ex:general-knowledge:sports:olympic-sports",
+      "unit_id": "unit:general-knowledge:sports",
+      "title": "Olympic Sports",
+      "duration": 5,
+      "points": 15,
+      "order_index": 0
+    },
+    {
+      "id": "ex:reasoning:verbal-reasoning:series-analogy",
+      "unit_id": "unit:reasoning:verbal-reasoning",
+      "title": "Series & Analogy",
+      "duration": 5,
+      "points": 15,
+      "order_index": 0
+    },
+    {
+      "id": "ex:reasoning:non-verbal:patterns",
+      "unit_id": "unit:reasoning:non-verbal",
+      "title": "Patterns",
+      "duration": 5,
+      "points": 15,
+      "order_index": 0
+    },
+    {
+      "id": "ex:reasoning:logical-puzzles:direction-blood-relation",
+      "unit_id": "unit:reasoning:logical-puzzles",
+      "title": "Direction & Blood Relation",
+      "duration": 5,
+      "points": 15,
+      "order_index": 0
+    },
+    {
+      "id": "ex:history:ancient-history:indus-valley-beyond",
+      "unit_id": "unit:history:ancient-history",
+      "title": "Indus Valley & Beyond",
+      "duration": 5,
+      "points": 15,
+      "order_index": 0
+    },
+    {
+      "id": "ex:history:medieval-history:sultanates-mughals",
+      "unit_id": "unit:history:medieval-history",
+      "title": "Sultanates & Mughals",
+      "duration": 5,
+      "points": 15,
+      "order_index": 0
+    },
+    {
+      "id": "ex:history:modern-history:freedom-movement",
+      "unit_id": "unit:history:modern-history",
+      "title": "Freedom Movement",
+      "duration": 5,
+      "points": 15,
+      "order_index": 0
+    },
+    {
+      "id": "ex:geography:physical-geography:earth-atmosphere",
+      "unit_id": "unit:geography:physical-geography",
+      "title": "Earth & Atmosphere",
+      "duration": 5,
+      "points": 15,
+      "order_index": 0
+    },
+    {
+      "id": "ex:geography:world-geography:rivers-mountains",
+      "unit_id": "unit:geography:world-geography",
+      "title": "Rivers & Mountains",
+      "duration": 5,
+      "points": 15,
+      "order_index": 0
+    },
+    {
+      "id": "ex:geography:indian-geography:states-rivers",
+      "unit_id": "unit:geography:indian-geography",
+      "title": "States & Rivers",
+      "duration": 5,
+      "points": 15,
+      "order_index": 0
+    }
+  ],
+  "exams": [
+    {
+      "id": "exam:jee-main-2026",
+      "title": "JEE Main 2026",
+      "slug": "jee-main-2026",
+      "description": "Engineering entrance — Physics, Chemistry, Mathematics."
+    },
+    {
+      "id": "exam:neet-2026",
+      "title": "NEET 2026",
+      "slug": "neet-2026",
+      "description": "Medical entrance — Physics, Chemistry, Biology."
+    },
+    {
+      "id": "exam:nimcet-2026",
+      "title": "NIMCET 2026",
+      "slug": "nimcet-2026",
+      "description": "MCA entrance — Mathematics, Computer Science, Reasoning, English."
+    },
+    {
+      "id": "exam:gate-cse-2026",
+      "title": "GATE CSE 2026",
+      "slug": "gate-cse-2026",
+      "description": "Graduate aptitude in CS — CS, Mathematics, Reasoning."
+    },
+    {
+      "id": "exam:upsc-prelims-2026",
+      "title": "UPSC Prelims 2026",
+      "slug": "upsc-prelims-2026",
+      "description": "Civil services — History, Geography, GK, English, Reasoning."
+    }
+  ],
+  "exam_subjects": [
+    {
+      "exam_id": "exam:jee-main-2026",
+      "subject_id": "subj:physics",
+      "order_index": 0
+    },
+    {
+      "exam_id": "exam:jee-main-2026",
+      "subject_id": "subj:chemistry",
+      "order_index": 1
+    },
+    {
+      "exam_id": "exam:jee-main-2026",
+      "subject_id": "subj:mathematics",
+      "order_index": 2
+    },
+    {
+      "exam_id": "exam:neet-2026",
+      "subject_id": "subj:physics",
+      "order_index": 0
+    },
+    {
+      "exam_id": "exam:neet-2026",
+      "subject_id": "subj:chemistry",
+      "order_index": 1
+    },
+    {
+      "exam_id": "exam:neet-2026",
+      "subject_id": "subj:biology",
+      "order_index": 2
+    },
+    {
+      "exam_id": "exam:nimcet-2026",
+      "subject_id": "subj:mathematics",
+      "order_index": 0
+    },
+    {
+      "exam_id": "exam:nimcet-2026",
+      "subject_id": "subj:computer-science",
+      "order_index": 1
+    },
+    {
+      "exam_id": "exam:nimcet-2026",
+      "subject_id": "subj:reasoning",
+      "order_index": 2
+    },
+    {
+      "exam_id": "exam:nimcet-2026",
+      "subject_id": "subj:english",
+      "order_index": 3
+    },
+    {
+      "exam_id": "exam:gate-cse-2026",
+      "subject_id": "subj:computer-science",
+      "order_index": 0
+    },
+    {
+      "exam_id": "exam:gate-cse-2026",
+      "subject_id": "subj:mathematics",
+      "order_index": 1
+    },
+    {
+      "exam_id": "exam:gate-cse-2026",
+      "subject_id": "subj:reasoning",
+      "order_index": 2
+    },
+    {
+      "exam_id": "exam:upsc-prelims-2026",
+      "subject_id": "subj:history",
+      "order_index": 0
+    },
+    {
+      "exam_id": "exam:upsc-prelims-2026",
+      "subject_id": "subj:geography",
+      "order_index": 1
+    },
+    {
+      "exam_id": "exam:upsc-prelims-2026",
+      "subject_id": "subj:general-knowledge",
+      "order_index": 2
+    },
+    {
+      "exam_id": "exam:upsc-prelims-2026",
+      "subject_id": "subj:english",
+      "order_index": 3
+    },
+    {
+      "exam_id": "exam:upsc-prelims-2026",
+      "subject_id": "subj:reasoning",
+      "order_index": 4
+    }
+  ],
+  "questions": [
+    {
+      "id": "q:physics:kinematics:motion-basics:0",
+      "exercise_id": "ex:physics:kinematics:motion-basics",
+      "type": "MCQ",
+      "prompt": "SI unit of acceleration is?",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "options": [
+          "m/s",
+          "m/s²",
+          "m·s",
+          "N"
+        ],
+        "correct_index": 1
+      },
+      "explanation": "Acceleration = change in velocity / time."
+    },
+    {
+      "id": "q:physics:kinematics:motion-basics:1",
+      "exercise_id": "ex:physics:kinematics:motion-basics",
+      "type": "MCQ",
+      "prompt": "Which quantity is a vector?",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "options": [
+          "Speed",
+          "Distance",
+          "Velocity",
+          "Mass"
+        ],
+        "correct_index": 2
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:physics:kinematics:motion-basics:2",
+      "exercise_id": "ex:physics:kinematics:motion-basics",
+      "type": "MCQ",
+      "prompt": "Slope of a position-time graph gives:",
+      "points": 10,
+      "difficulty": "hard",
+      "content": {
+        "options": [
+          "Acceleration",
+          "Velocity",
+          "Force",
+          "Momentum"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:physics:kinematics:motion-basics:3",
+      "exercise_id": "ex:physics:kinematics:motion-basics",
+      "type": "COMPLETE",
+      "prompt": "An object in free fall accelerates at ___ m/s² near Earth's surface.",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "blanks": [
+          "9.8"
+        ]
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:physics:kinematics:motion-basics:4",
+      "exercise_id": "ex:physics:kinematics:motion-basics",
+      "type": "REORDER",
+      "prompt": "Order the steps to solve a kinematics problem:",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "items": [
+          "Identify knowns",
+          "Pick equation",
+          "Solve",
+          "Verify units"
+        ],
+        "order": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:physics:kinematics:projectile-motion:0",
+      "exercise_id": "ex:physics:kinematics:projectile-motion",
+      "type": "MCQ",
+      "prompt": "At max height in a projectile, vertical velocity is:",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "options": [
+          "Maximum",
+          "Zero",
+          "Equal to horizontal",
+          "Negative"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:physics:kinematics:projectile-motion:1",
+      "exercise_id": "ex:physics:kinematics:projectile-motion",
+      "type": "MCQ",
+      "prompt": "Range of a projectile is maximum at angle:",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "options": [
+          "30°",
+          "45°",
+          "60°",
+          "90°"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:physics:kinematics:projectile-motion:2",
+      "exercise_id": "ex:physics:kinematics:projectile-motion",
+      "type": "MCQ",
+      "prompt": "Horizontal acceleration of an ideal projectile is:",
+      "points": 10,
+      "difficulty": "hard",
+      "content": {
+        "options": [
+          "g",
+          "0",
+          "-g",
+          "g/2"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:physics:kinematics:projectile-motion:3",
+      "exercise_id": "ex:physics:kinematics:projectile-motion",
+      "type": "MATCH",
+      "prompt": "Match symbol with quantity:",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "left": [
+          "v",
+          "a",
+          "t",
+          "s"
+        ],
+        "right": [
+          "velocity",
+          "acceleration",
+          "time",
+          "displacement"
+        ],
+        "map": {
+          "v": "velocity",
+          "a": "acceleration",
+          "t": "time",
+          "s": "displacement"
+        }
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:physics:kinematics:projectile-motion:4",
+      "exercise_id": "ex:physics:kinematics:projectile-motion",
+      "type": "COMPLETE",
+      "prompt": "Time of flight T = 2u sinθ / ___.",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "blanks": [
+          "g"
+        ]
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:physics:laws-of-motion:newton-s-laws:0",
+      "exercise_id": "ex:physics:laws-of-motion:newton-s-laws",
+      "type": "MCQ",
+      "prompt": "Newton's first law is also called:",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "options": [
+          "Law of inertia",
+          "Law of action",
+          "Law of gravity",
+          "Law of momentum"
+        ],
+        "correct_index": 0
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:physics:laws-of-motion:newton-s-laws:1",
+      "exercise_id": "ex:physics:laws-of-motion:newton-s-laws",
+      "type": "MCQ",
+      "prompt": "F = ma is which law?",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "options": [
+          "First",
+          "Second",
+          "Third",
+          "Zeroth"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:physics:laws-of-motion:newton-s-laws:2",
+      "exercise_id": "ex:physics:laws-of-motion:newton-s-laws",
+      "type": "MCQ",
+      "prompt": "Action and reaction act on:",
+      "points": 10,
+      "difficulty": "hard",
+      "content": {
+        "options": [
+          "Same body",
+          "Different bodies",
+          "No body",
+          "Earth only"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:physics:laws-of-motion:newton-s-laws:3",
+      "exercise_id": "ex:physics:laws-of-motion:newton-s-laws",
+      "type": "REORDER",
+      "prompt": "Order Newton's laws:",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "items": [
+          "Inertia",
+          "F=ma",
+          "Action-Reaction"
+        ],
+        "order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:physics:laws-of-motion:newton-s-laws:4",
+      "exercise_id": "ex:physics:laws-of-motion:newton-s-laws",
+      "type": "COMPLETE",
+      "prompt": "Momentum p = m × ___.",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "blanks": [
+          "v"
+        ]
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:physics:laws-of-motion:friction-circular-motion:0",
+      "exercise_id": "ex:physics:laws-of-motion:friction-circular-motion",
+      "type": "MCQ",
+      "prompt": "Centripetal force points:",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "options": [
+          "Outward",
+          "Tangent",
+          "Inward",
+          "Upward"
+        ],
+        "correct_index": 2
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:physics:laws-of-motion:friction-circular-motion:1",
+      "exercise_id": "ex:physics:laws-of-motion:friction-circular-motion",
+      "type": "MCQ",
+      "prompt": "Friction always opposes:",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "options": [
+          "Motion",
+          "Mass",
+          "Weight",
+          "Time"
+        ],
+        "correct_index": 0
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:physics:laws-of-motion:friction-circular-motion:2",
+      "exercise_id": "ex:physics:laws-of-motion:friction-circular-motion",
+      "type": "MCQ",
+      "prompt": "Coefficient of friction is:",
+      "points": 10,
+      "difficulty": "hard",
+      "content": {
+        "options": [
+          "Vector",
+          "Dimensional",
+          "Dimensionless",
+          "Negative"
+        ],
+        "correct_index": 2
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:physics:laws-of-motion:friction-circular-motion:3",
+      "exercise_id": "ex:physics:laws-of-motion:friction-circular-motion",
+      "type": "MATCH",
+      "prompt": "Match force with example:",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "left": [
+          "Tension",
+          "Normal",
+          "Friction"
+        ],
+        "right": [
+          "Rope",
+          "Surface",
+          "Brake"
+        ],
+        "map": {
+          "Tension": "Rope",
+          "Normal": "Surface",
+          "Friction": "Brake"
+        }
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:physics:laws-of-motion:friction-circular-motion:4",
+      "exercise_id": "ex:physics:laws-of-motion:friction-circular-motion",
+      "type": "COMPLETE",
+      "prompt": "Centripetal acceleration a = v² / ___.",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "blanks": [
+          "r"
+        ]
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:physics:electromagnetism:electrostatics:0",
+      "exercise_id": "ex:physics:electromagnetism:electrostatics",
+      "type": "MCQ",
+      "prompt": "SI unit of electric charge:",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "options": [
+          "Volt",
+          "Ampere",
+          "Coulomb",
+          "Ohm"
+        ],
+        "correct_index": 2
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:physics:electromagnetism:electrostatics:1",
+      "exercise_id": "ex:physics:electromagnetism:electrostatics",
+      "type": "MCQ",
+      "prompt": "Coulomb's law force varies as:",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "options": [
+          "1/r",
+          "1/r²",
+          "r",
+          "r²"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:physics:electromagnetism:electrostatics:2",
+      "exercise_id": "ex:physics:electromagnetism:electrostatics",
+      "type": "MCQ",
+      "prompt": "Electric field inside a conductor in equilibrium is:",
+      "points": 10,
+      "difficulty": "hard",
+      "content": {
+        "options": [
+          "Maximum",
+          "Zero",
+          "Infinite",
+          "Variable"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:physics:electromagnetism:electrostatics:3",
+      "exercise_id": "ex:physics:electromagnetism:electrostatics",
+      "type": "COMPLETE",
+      "prompt": "1 Coulomb = ___ × electron charge approximately (use 6.24e18).",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "blanks": [
+          "6.24e18"
+        ]
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:physics:electromagnetism:electrostatics:4",
+      "exercise_id": "ex:physics:electromagnetism:electrostatics",
+      "type": "MATCH",
+      "prompt": "Match constant with value:",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "left": [
+          "k",
+          "ε₀",
+          "e"
+        ],
+        "right": [
+          "9e9",
+          "8.85e-12",
+          "1.6e-19"
+        ],
+        "map": {
+          "k": "9e9",
+          "ε₀": "8.85e-12",
+          "e": "1.6e-19"
+        }
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:chemistry:atomic-structure:atoms-quantum-numbers:0",
+      "exercise_id": "ex:chemistry:atomic-structure:atoms-quantum-numbers",
+      "type": "MCQ",
+      "prompt": "Maximum electrons in n=2 shell:",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "options": [
+          "2",
+          "8",
+          "18",
+          "32"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:chemistry:atomic-structure:atoms-quantum-numbers:1",
+      "exercise_id": "ex:chemistry:atomic-structure:atoms-quantum-numbers",
+      "type": "MCQ",
+      "prompt": "Discoverer of the electron:",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "options": [
+          "Bohr",
+          "Thomson",
+          "Rutherford",
+          "Dalton"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:chemistry:atomic-structure:atoms-quantum-numbers:2",
+      "exercise_id": "ex:chemistry:atomic-structure:atoms-quantum-numbers",
+      "type": "MCQ",
+      "prompt": "Principal quantum number defines:",
+      "points": 10,
+      "difficulty": "hard",
+      "content": {
+        "options": [
+          "Shape",
+          "Orientation",
+          "Shell",
+          "Spin"
+        ],
+        "correct_index": 2
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:chemistry:atomic-structure:atoms-quantum-numbers:3",
+      "exercise_id": "ex:chemistry:atomic-structure:atoms-quantum-numbers",
+      "type": "COMPLETE",
+      "prompt": "Mass number = protons + ___.",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "blanks": [
+          "neutrons"
+        ]
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:chemistry:atomic-structure:atoms-quantum-numbers:4",
+      "exercise_id": "ex:chemistry:atomic-structure:atoms-quantum-numbers",
+      "type": "MATCH",
+      "prompt": "Match scientist with model:",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "left": [
+          "Bohr",
+          "Thomson",
+          "Rutherford"
+        ],
+        "right": [
+          "Orbits",
+          "Plum-pudding",
+          "Nucleus"
+        ],
+        "map": {
+          "Bohr": "Orbits",
+          "Thomson": "Plum-pudding",
+          "Rutherford": "Nucleus"
+        }
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:chemistry:periodic-table:periodic-trends:0",
+      "exercise_id": "ex:chemistry:periodic-table:periodic-trends",
+      "type": "MCQ",
+      "prompt": "Most electronegative element:",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "options": [
+          "O",
+          "F",
+          "Cl",
+          "N"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:chemistry:periodic-table:periodic-trends:1",
+      "exercise_id": "ex:chemistry:periodic-table:periodic-trends",
+      "type": "MCQ",
+      "prompt": "Group of alkali metals:",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "options": [
+          "1",
+          "2",
+          "17",
+          "18"
+        ],
+        "correct_index": 0
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:chemistry:periodic-table:periodic-trends:2",
+      "exercise_id": "ex:chemistry:periodic-table:periodic-trends",
+      "type": "MCQ",
+      "prompt": "Atomic radius across a period:",
+      "points": 10,
+      "difficulty": "hard",
+      "content": {
+        "options": [
+          "Increases",
+          "Decreases",
+          "Same",
+          "Random"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:chemistry:periodic-table:periodic-trends:3",
+      "exercise_id": "ex:chemistry:periodic-table:periodic-trends",
+      "type": "REORDER",
+      "prompt": "Order by increasing atomic number:",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "items": [
+          "H",
+          "He",
+          "Li",
+          "Be"
+        ],
+        "order": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:chemistry:periodic-table:periodic-trends:4",
+      "exercise_id": "ex:chemistry:periodic-table:periodic-trends",
+      "type": "COMPLETE",
+      "prompt": "Noble gases are in group ___.",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "blanks": [
+          "18"
+        ]
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:chemistry:organic-basics:hydrocarbons:0",
+      "exercise_id": "ex:chemistry:organic-basics:hydrocarbons",
+      "type": "MCQ",
+      "prompt": "Simplest alkane:",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "options": [
+          "Methane",
+          "Ethane",
+          "Propane",
+          "Butane"
+        ],
+        "correct_index": 0
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:chemistry:organic-basics:hydrocarbons:1",
+      "exercise_id": "ex:chemistry:organic-basics:hydrocarbons",
+      "type": "MCQ",
+      "prompt": "General formula of alkenes:",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "options": [
+          "CnH2n+2",
+          "CnH2n",
+          "CnH2n-2",
+          "CnHn"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:chemistry:organic-basics:hydrocarbons:2",
+      "exercise_id": "ex:chemistry:organic-basics:hydrocarbons",
+      "type": "MCQ",
+      "prompt": "Functional group of alcohols:",
+      "points": 10,
+      "difficulty": "hard",
+      "content": {
+        "options": [
+          "-COOH",
+          "-OH",
+          "-CHO",
+          "-NH2"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:chemistry:organic-basics:hydrocarbons:3",
+      "exercise_id": "ex:chemistry:organic-basics:hydrocarbons",
+      "type": "MATCH",
+      "prompt": "Match compound with class:",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "left": [
+          "CH4",
+          "C2H4",
+          "C2H2"
+        ],
+        "right": [
+          "Alkane",
+          "Alkene",
+          "Alkyne"
+        ],
+        "map": {
+          "CH4": "Alkane",
+          "C2H4": "Alkene",
+          "C2H2": "Alkyne"
+        }
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:chemistry:organic-basics:hydrocarbons:4",
+      "exercise_id": "ex:chemistry:organic-basics:hydrocarbons",
+      "type": "COMPLETE",
+      "prompt": "Benzene molecular formula is ___.",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "blanks": [
+          "C6H6"
+        ]
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:chemistry:chemical-bonding:bonds-geometry:0",
+      "exercise_id": "ex:chemistry:chemical-bonding:bonds-geometry",
+      "type": "MCQ",
+      "prompt": "Bond in NaCl is:",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "options": [
+          "Covalent",
+          "Ionic",
+          "Metallic",
+          "Hydrogen"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:chemistry:chemical-bonding:bonds-geometry:1",
+      "exercise_id": "ex:chemistry:chemical-bonding:bonds-geometry",
+      "type": "MCQ",
+      "prompt": "Shape of CH4:",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "options": [
+          "Linear",
+          "Trigonal",
+          "Tetrahedral",
+          "Bent"
+        ],
+        "correct_index": 2
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:chemistry:chemical-bonding:bonds-geometry:2",
+      "exercise_id": "ex:chemistry:chemical-bonding:bonds-geometry",
+      "type": "MCQ",
+      "prompt": "Hybridization in BF3:",
+      "points": 10,
+      "difficulty": "hard",
+      "content": {
+        "options": [
+          "sp",
+          "sp²",
+          "sp³",
+          "sp³d"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:chemistry:chemical-bonding:bonds-geometry:3",
+      "exercise_id": "ex:chemistry:chemical-bonding:bonds-geometry",
+      "type": "COMPLETE",
+      "prompt": "Water molecule is ___ in shape.",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "blanks": [
+          "bent"
+        ]
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:chemistry:chemical-bonding:bonds-geometry:4",
+      "exercise_id": "ex:chemistry:chemical-bonding:bonds-geometry",
+      "type": "REORDER",
+      "prompt": "Bond strength order (low→high):",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "items": [
+          "Hydrogen",
+          "Ionic",
+          "Covalent",
+          "Metallic"
+        ],
+        "order": [
+          0,
+          3,
+          1,
+          2
+        ]
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:biology:cell-biology:the-cell:0",
+      "exercise_id": "ex:biology:cell-biology:the-cell",
+      "type": "MCQ",
+      "prompt": "Powerhouse of the cell:",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "options": [
+          "Nucleus",
+          "Mitochondria",
+          "Ribosome",
+          "Golgi"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:biology:cell-biology:the-cell:1",
+      "exercise_id": "ex:biology:cell-biology:the-cell",
+      "type": "MCQ",
+      "prompt": "Plant cells uniquely contain:",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "options": [
+          "Mitochondria",
+          "Cell wall",
+          "Nucleus",
+          "ER"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:biology:cell-biology:the-cell:2",
+      "exercise_id": "ex:biology:cell-biology:the-cell",
+      "type": "MCQ",
+      "prompt": "Site of protein synthesis:",
+      "points": 10,
+      "difficulty": "hard",
+      "content": {
+        "options": [
+          "Ribosome",
+          "Lysosome",
+          "Vacuole",
+          "Nucleolus"
+        ],
+        "correct_index": 0
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:biology:cell-biology:the-cell:3",
+      "exercise_id": "ex:biology:cell-biology:the-cell",
+      "type": "MATCH",
+      "prompt": "Match organelle to function:",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "left": [
+          "Nucleus",
+          "Mitochondria",
+          "Chloroplast"
+        ],
+        "right": [
+          "DNA",
+          "ATP",
+          "Photosynthesis"
+        ],
+        "map": {
+          "Nucleus": "DNA",
+          "Mitochondria": "ATP",
+          "Chloroplast": "Photosynthesis"
+        }
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:biology:cell-biology:the-cell:4",
+      "exercise_id": "ex:biology:cell-biology:the-cell",
+      "type": "COMPLETE",
+      "prompt": "Cell theory states all living things are made of ___.",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "blanks": [
+          "cells"
+        ]
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:biology:genetics:mendelian-genetics:0",
+      "exercise_id": "ex:biology:genetics:mendelian-genetics",
+      "type": "MCQ",
+      "prompt": "Mendel worked on:",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "options": [
+          "Pea plants",
+          "Mice",
+          "Fruit fly",
+          "Bacteria"
+        ],
+        "correct_index": 0
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:biology:genetics:mendelian-genetics:1",
+      "exercise_id": "ex:biology:genetics:mendelian-genetics",
+      "type": "MCQ",
+      "prompt": "Genotype Aa is:",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "options": [
+          "Homozygous",
+          "Heterozygous",
+          "Hemizygous",
+          "Recessive"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:biology:genetics:mendelian-genetics:2",
+      "exercise_id": "ex:biology:genetics:mendelian-genetics",
+      "type": "MCQ",
+      "prompt": "DNA bases pair as:",
+      "points": 10,
+      "difficulty": "hard",
+      "content": {
+        "options": [
+          "A-G",
+          "A-T",
+          "C-T",
+          "A-C"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:biology:genetics:mendelian-genetics:3",
+      "exercise_id": "ex:biology:genetics:mendelian-genetics",
+      "type": "REORDER",
+      "prompt": "Order central dogma:",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "items": [
+          "DNA",
+          "RNA",
+          "Protein"
+        ],
+        "order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:biology:genetics:mendelian-genetics:4",
+      "exercise_id": "ex:biology:genetics:mendelian-genetics",
+      "type": "COMPLETE",
+      "prompt": "Humans have ___ pairs of chromosomes.",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "blanks": [
+          "23"
+        ]
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:biology:human-physiology:systems:0",
+      "exercise_id": "ex:biology:human-physiology:systems",
+      "type": "MCQ",
+      "prompt": "Number of chambers in human heart:",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "options": [
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "correct_index": 2
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:biology:human-physiology:systems:1",
+      "exercise_id": "ex:biology:human-physiology:systems",
+      "type": "MCQ",
+      "prompt": "Largest gland in human body:",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "options": [
+          "Pancreas",
+          "Liver",
+          "Thyroid",
+          "Adrenal"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:biology:human-physiology:systems:2",
+      "exercise_id": "ex:biology:human-physiology:systems",
+      "type": "MCQ",
+      "prompt": "Functional unit of kidney:",
+      "points": 10,
+      "difficulty": "hard",
+      "content": {
+        "options": [
+          "Neuron",
+          "Nephron",
+          "Alveolus",
+          "Villus"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:biology:human-physiology:systems:3",
+      "exercise_id": "ex:biology:human-physiology:systems",
+      "type": "MATCH",
+      "prompt": "Match organ to system:",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "left": [
+          "Heart",
+          "Lung",
+          "Kidney"
+        ],
+        "right": [
+          "Circulatory",
+          "Respiratory",
+          "Excretory"
+        ],
+        "map": {
+          "Heart": "Circulatory",
+          "Lung": "Respiratory",
+          "Kidney": "Excretory"
+        }
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:biology:human-physiology:systems:4",
+      "exercise_id": "ex:biology:human-physiology:systems",
+      "type": "COMPLETE",
+      "prompt": "Hemoglobin contains the metal ___.",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "blanks": [
+          "iron"
+        ]
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:mathematics:algebra:equations:0",
+      "exercise_id": "ex:mathematics:algebra:equations",
+      "type": "MCQ",
+      "prompt": "Solve x: 2x+3=11",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "options": [
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:mathematics:algebra:equations:1",
+      "exercise_id": "ex:mathematics:algebra:equations",
+      "type": "MCQ",
+      "prompt": "Discriminant of ax²+bx+c is:",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "options": [
+          "b²-4ac",
+          "b²+4ac",
+          "4ac-b²",
+          "2a"
+        ],
+        "correct_index": 0
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:mathematics:algebra:equations:2",
+      "exercise_id": "ex:mathematics:algebra:equations",
+      "type": "MCQ",
+      "prompt": "Sum of roots of x²-5x+6=0:",
+      "points": 10,
+      "difficulty": "hard",
+      "content": {
+        "options": [
+          "5",
+          "-5",
+          "6",
+          "-6"
+        ],
+        "correct_index": 0
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:mathematics:algebra:equations:3",
+      "exercise_id": "ex:mathematics:algebra:equations",
+      "type": "COMPLETE",
+      "prompt": "Identity: (a+b)² = a² + 2ab + ___.",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "blanks": [
+          "b²"
+        ]
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:mathematics:algebra:equations:4",
+      "exercise_id": "ex:mathematics:algebra:equations",
+      "type": "REORDER",
+      "prompt": "Solve a linear equation steps:",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "items": [
+          "Simplify",
+          "Isolate variable",
+          "Divide",
+          "Verify"
+        ],
+        "order": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:mathematics:calculus:limits-derivatives:0",
+      "exercise_id": "ex:mathematics:calculus:limits-derivatives",
+      "type": "MCQ",
+      "prompt": "d/dx(x²) =",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "options": [
+          "x",
+          "2x",
+          "x²",
+          "2"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:mathematics:calculus:limits-derivatives:1",
+      "exercise_id": "ex:mathematics:calculus:limits-derivatives",
+      "type": "MCQ",
+      "prompt": "lim x→0 sinx/x =",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "options": [
+          "0",
+          "1",
+          "∞",
+          "undefined"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:mathematics:calculus:limits-derivatives:2",
+      "exercise_id": "ex:mathematics:calculus:limits-derivatives",
+      "type": "MCQ",
+      "prompt": "Integral of 1/x dx is:",
+      "points": 10,
+      "difficulty": "hard",
+      "content": {
+        "options": [
+          "x",
+          "ln|x|+C",
+          "1/x²",
+          "e^x"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:mathematics:calculus:limits-derivatives:3",
+      "exercise_id": "ex:mathematics:calculus:limits-derivatives",
+      "type": "COMPLETE",
+      "prompt": "d/dx(sin x) = ___.",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "blanks": [
+          "cos x"
+        ]
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:mathematics:calculus:limits-derivatives:4",
+      "exercise_id": "ex:mathematics:calculus:limits-derivatives",
+      "type": "MATCH",
+      "prompt": "Match function to derivative:",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "left": [
+          "x",
+          "x²",
+          "e^x"
+        ],
+        "right": [
+          "1",
+          "2x",
+          "e^x"
+        ],
+        "map": {
+          "x": "1",
+          "x²": "2x",
+          "e^x": "e^x"
+        }
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:mathematics:trigonometry:identities:0",
+      "exercise_id": "ex:mathematics:trigonometry:identities",
+      "type": "MCQ",
+      "prompt": "sin²θ + cos²θ =",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "options": [
+          "0",
+          "1",
+          "2",
+          "tan²θ"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:mathematics:trigonometry:identities:1",
+      "exercise_id": "ex:mathematics:trigonometry:identities",
+      "type": "MCQ",
+      "prompt": "tan(45°) =",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "options": [
+          "0",
+          "1",
+          "√2",
+          "∞"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:mathematics:trigonometry:identities:2",
+      "exercise_id": "ex:mathematics:trigonometry:identities",
+      "type": "MCQ",
+      "prompt": "sin(90°) =",
+      "points": 10,
+      "difficulty": "hard",
+      "content": {
+        "options": [
+          "0",
+          "1",
+          "0.5",
+          "-1"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:mathematics:trigonometry:identities:3",
+      "exercise_id": "ex:mathematics:trigonometry:identities",
+      "type": "COMPLETE",
+      "prompt": "1 + tan²θ = ___.",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "blanks": [
+          "sec²θ"
+        ]
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:mathematics:trigonometry:identities:4",
+      "exercise_id": "ex:mathematics:trigonometry:identities",
+      "type": "REORDER",
+      "prompt": "Increasing order in [0,90°]:",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "items": [
+          "sin 0°",
+          "sin 30°",
+          "sin 45°",
+          "sin 90°"
+        ],
+        "order": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:mathematics:probability:basics:0",
+      "exercise_id": "ex:mathematics:probability:basics",
+      "type": "MCQ",
+      "prompt": "P(Head) on a fair coin:",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "options": [
+          "0",
+          "0.25",
+          "0.5",
+          "1"
+        ],
+        "correct_index": 2
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:mathematics:probability:basics:1",
+      "exercise_id": "ex:mathematics:probability:basics",
+      "type": "MCQ",
+      "prompt": "P(impossible event):",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "options": [
+          "0",
+          "0.5",
+          "1",
+          "∞"
+        ],
+        "correct_index": 0
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:mathematics:probability:basics:2",
+      "exercise_id": "ex:mathematics:probability:basics",
+      "type": "MCQ",
+      "prompt": "Sum of probabilities of sample space:",
+      "points": 10,
+      "difficulty": "hard",
+      "content": {
+        "options": [
+          "0",
+          "0.5",
+          "1",
+          "depends"
+        ],
+        "correct_index": 2
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:mathematics:probability:basics:3",
+      "exercise_id": "ex:mathematics:probability:basics",
+      "type": "COMPLETE",
+      "prompt": "P(A∪B) = P(A) + P(B) - P(___).",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "blanks": [
+          "A∩B"
+        ]
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:mathematics:probability:basics:4",
+      "exercise_id": "ex:mathematics:probability:basics",
+      "type": "MATCH",
+      "prompt": "Match event with prob (fair die):",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "left": [
+          "1",
+          "even",
+          "<3"
+        ],
+        "right": [
+          "1/6",
+          "1/2",
+          "1/3"
+        ],
+        "map": {
+          "1": "1/6",
+          "even": "1/2",
+          "<3": "1/3"
+        }
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:computer-science:programming-fundamentals:python-basics:0",
+      "exercise_id": "ex:computer-science:programming-fundamentals:python-basics",
+      "type": "MCQ",
+      "prompt": "Which is mutable in Python?",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "options": [
+          "tuple",
+          "list",
+          "str",
+          "int"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:computer-science:programming-fundamentals:python-basics:1",
+      "exercise_id": "ex:computer-science:programming-fundamentals:python-basics",
+      "type": "MCQ",
+      "prompt": "len('python') is:",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "options": [
+          "5",
+          "6",
+          "7",
+          "Error"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:computer-science:programming-fundamentals:python-basics:2",
+      "exercise_id": "ex:computer-science:programming-fundamentals:python-basics",
+      "type": "MCQ",
+      "prompt": "Operator for integer division:",
+      "points": 10,
+      "difficulty": "hard",
+      "content": {
+        "options": [
+          "/",
+          "//",
+          "%",
+          "**"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:computer-science:programming-fundamentals:python-basics:3",
+      "exercise_id": "ex:computer-science:programming-fundamentals:python-basics",
+      "type": "COMPLETE",
+      "prompt": "To define a function use the ___ keyword.",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "blanks": [
+          "def"
+        ]
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:computer-science:programming-fundamentals:python-basics:4",
+      "exercise_id": "ex:computer-science:programming-fundamentals:python-basics",
+      "type": "REORDER",
+      "prompt": "Run a Python script steps:",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "items": [
+          "Write code",
+          "Save .py",
+          "Run interpreter",
+          "See output"
+        ],
+        "order": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:computer-science:data-structures:linear-structures:0",
+      "exercise_id": "ex:computer-science:data-structures:linear-structures",
+      "type": "MCQ",
+      "prompt": "LIFO order is:",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "options": [
+          "Queue",
+          "Stack",
+          "Heap",
+          "Tree"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:computer-science:data-structures:linear-structures:1",
+      "exercise_id": "ex:computer-science:data-structures:linear-structures",
+      "type": "MCQ",
+      "prompt": "Worst case access in singly linked list:",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "options": [
+          "O(1)",
+          "O(log n)",
+          "O(n)",
+          "O(n²)"
+        ],
+        "correct_index": 2
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:computer-science:data-structures:linear-structures:2",
+      "exercise_id": "ex:computer-science:data-structures:linear-structures",
+      "type": "MCQ",
+      "prompt": "Array index in most languages starts at:",
+      "points": 10,
+      "difficulty": "hard",
+      "content": {
+        "options": [
+          "-1",
+          "0",
+          "1",
+          "depends"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:computer-science:data-structures:linear-structures:3",
+      "exercise_id": "ex:computer-science:data-structures:linear-structures",
+      "type": "MATCH",
+      "prompt": "Match structure to property:",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "left": [
+          "Stack",
+          "Queue",
+          "BST"
+        ],
+        "right": [
+          "LIFO",
+          "FIFO",
+          "Sorted"
+        ],
+        "map": {
+          "Stack": "LIFO",
+          "Queue": "FIFO",
+          "BST": "Sorted"
+        }
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:computer-science:data-structures:linear-structures:4",
+      "exercise_id": "ex:computer-science:data-structures:linear-structures",
+      "type": "COMPLETE",
+      "prompt": "A balanced BST search is O(___).",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "blanks": [
+          "log n"
+        ]
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:computer-science:data-structures:trees-graphs:0",
+      "exercise_id": "ex:computer-science:data-structures:trees-graphs",
+      "type": "MCQ",
+      "prompt": "Root of a tree has level:",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "options": [
+          "-1",
+          "0",
+          "1",
+          "2"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:computer-science:data-structures:trees-graphs:1",
+      "exercise_id": "ex:computer-science:data-structures:trees-graphs",
+      "type": "MCQ",
+      "prompt": "BFS uses:",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "options": [
+          "Stack",
+          "Queue",
+          "Heap",
+          "Set"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:computer-science:data-structures:trees-graphs:2",
+      "exercise_id": "ex:computer-science:data-structures:trees-graphs",
+      "type": "MCQ",
+      "prompt": "Edges in a tree with n nodes:",
+      "points": 10,
+      "difficulty": "hard",
+      "content": {
+        "options": [
+          "n",
+          "n-1",
+          "n+1",
+          "2n"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:computer-science:data-structures:trees-graphs:3",
+      "exercise_id": "ex:computer-science:data-structures:trees-graphs",
+      "type": "REORDER",
+      "prompt": "DFS traversal order (preorder of root,L,R):",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "items": [
+          "Visit root",
+          "Traverse left",
+          "Traverse right"
+        ],
+        "order": [
+          0,
+          1,
+          2
+        ]
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:computer-science:data-structures:trees-graphs:4",
+      "exercise_id": "ex:computer-science:data-structures:trees-graphs",
+      "type": "COMPLETE",
+      "prompt": "Dijkstra finds the ___ path.",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "blanks": [
+          "shortest"
+        ]
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:computer-science:algorithms:sorting-searching:0",
+      "exercise_id": "ex:computer-science:algorithms:sorting-searching",
+      "type": "MCQ",
+      "prompt": "Average time for QuickSort:",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "options": [
+          "O(n)",
+          "O(n log n)",
+          "O(n²)",
+          "O(log n)"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:computer-science:algorithms:sorting-searching:1",
+      "exercise_id": "ex:computer-science:algorithms:sorting-searching",
+      "type": "MCQ",
+      "prompt": "Binary search requires array to be:",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "options": [
+          "Random",
+          "Sorted",
+          "Hashed",
+          "Reversed"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:computer-science:algorithms:sorting-searching:2",
+      "exercise_id": "ex:computer-science:algorithms:sorting-searching",
+      "type": "MCQ",
+      "prompt": "Best case BubbleSort:",
+      "points": 10,
+      "difficulty": "hard",
+      "content": {
+        "options": [
+          "O(1)",
+          "O(n)",
+          "O(n log n)",
+          "O(n²)"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:computer-science:algorithms:sorting-searching:3",
+      "exercise_id": "ex:computer-science:algorithms:sorting-searching",
+      "type": "MATCH",
+      "prompt": "Match algo to type:",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "left": [
+          "MergeSort",
+          "Dijkstra",
+          "DFS"
+        ],
+        "right": [
+          "Sort",
+          "Shortest path",
+          "Traversal"
+        ],
+        "map": {
+          "MergeSort": "Sort",
+          "Dijkstra": "Shortest path",
+          "DFS": "Traversal"
+        }
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:computer-science:algorithms:sorting-searching:4",
+      "exercise_id": "ex:computer-science:algorithms:sorting-searching",
+      "type": "COMPLETE",
+      "prompt": "Big-O of binary search is O(___).",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "blanks": [
+          "log n"
+        ]
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:computer-science:operating-systems:processes-memory:0",
+      "exercise_id": "ex:computer-science:operating-systems:processes-memory",
+      "type": "MCQ",
+      "prompt": "A deadlock requires:",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "options": [
+          "1 condition",
+          "2 conditions",
+          "3 conditions",
+          "4 conditions"
+        ],
+        "correct_index": 3
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:computer-science:operating-systems:processes-memory:1",
+      "exercise_id": "ex:computer-science:operating-systems:processes-memory",
+      "type": "MCQ",
+      "prompt": "Page fault is handled by:",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "options": [
+          "CPU",
+          "OS",
+          "User",
+          "Disk"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:computer-science:operating-systems:processes-memory:2",
+      "exercise_id": "ex:computer-science:operating-systems:processes-memory",
+      "type": "MCQ",
+      "prompt": "Process states minimum count:",
+      "points": 10,
+      "difficulty": "hard",
+      "content": {
+        "options": [
+          "2",
+          "3",
+          "5",
+          "7"
+        ],
+        "correct_index": 2
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:computer-science:operating-systems:processes-memory:3",
+      "exercise_id": "ex:computer-science:operating-systems:processes-memory",
+      "type": "REORDER",
+      "prompt": "Process lifecycle:",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "items": [
+          "New",
+          "Ready",
+          "Running",
+          "Terminated"
+        ],
+        "order": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:computer-science:operating-systems:processes-memory:4",
+      "exercise_id": "ex:computer-science:operating-systems:processes-memory",
+      "type": "COMPLETE",
+      "prompt": "Virtual memory uses ___ to extend RAM.",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "blanks": [
+          "disk"
+        ]
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:english:grammar:tenses-parts-of-speech:0",
+      "exercise_id": "ex:english:grammar:tenses-parts-of-speech",
+      "type": "MCQ",
+      "prompt": "Choose the verb: She ___ to school every day.",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "options": [
+          "go",
+          "goes",
+          "going",
+          "gone"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:english:grammar:tenses-parts-of-speech:1",
+      "exercise_id": "ex:english:grammar:tenses-parts-of-speech",
+      "type": "MCQ",
+      "prompt": "'Quickly' is a:",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "options": [
+          "Noun",
+          "Verb",
+          "Adverb",
+          "Adjective"
+        ],
+        "correct_index": 2
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:english:grammar:tenses-parts-of-speech:2",
+      "exercise_id": "ex:english:grammar:tenses-parts-of-speech",
+      "type": "MCQ",
+      "prompt": "Past tense of 'run':",
+      "points": 10,
+      "difficulty": "hard",
+      "content": {
+        "options": [
+          "runned",
+          "ran",
+          "run",
+          "running"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:english:grammar:tenses-parts-of-speech:3",
+      "exercise_id": "ex:english:grammar:tenses-parts-of-speech",
+      "type": "COMPLETE",
+      "prompt": "He has ___ his homework. (do)",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "blanks": [
+          "done"
+        ]
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:english:grammar:tenses-parts-of-speech:4",
+      "exercise_id": "ex:english:grammar:tenses-parts-of-speech",
+      "type": "MATCH",
+      "prompt": "Match word with part of speech:",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "left": [
+          "dog",
+          "swiftly",
+          "blue"
+        ],
+        "right": [
+          "noun",
+          "adverb",
+          "adjective"
+        ],
+        "map": {
+          "dog": "noun",
+          "swiftly": "adverb",
+          "blue": "adjective"
+        }
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:english:vocabulary:synonyms-antonyms:0",
+      "exercise_id": "ex:english:vocabulary:synonyms-antonyms",
+      "type": "MCQ",
+      "prompt": "Synonym of 'happy':",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "options": [
+          "sad",
+          "joyful",
+          "angry",
+          "tired"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:english:vocabulary:synonyms-antonyms:1",
+      "exercise_id": "ex:english:vocabulary:synonyms-antonyms",
+      "type": "MCQ",
+      "prompt": "Antonym of 'begin':",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "options": [
+          "start",
+          "open",
+          "end",
+          "go"
+        ],
+        "correct_index": 2
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:english:vocabulary:synonyms-antonyms:2",
+      "exercise_id": "ex:english:vocabulary:synonyms-antonyms",
+      "type": "MCQ",
+      "prompt": "Synonym of 'huge':",
+      "points": 10,
+      "difficulty": "hard",
+      "content": {
+        "options": [
+          "tiny",
+          "enormous",
+          "narrow",
+          "weak"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:english:vocabulary:synonyms-antonyms:3",
+      "exercise_id": "ex:english:vocabulary:synonyms-antonyms",
+      "type": "REORDER",
+      "prompt": "Order alphabetically:",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "items": [
+          "apple",
+          "banana",
+          "cherry",
+          "date"
+        ],
+        "order": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:english:vocabulary:synonyms-antonyms:4",
+      "exercise_id": "ex:english:vocabulary:synonyms-antonyms",
+      "type": "COMPLETE",
+      "prompt": "Antonym of 'difficult' is ___.",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "blanks": [
+          "easy"
+        ]
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:english:comprehension:reading-skills:0",
+      "exercise_id": "ex:english:comprehension:reading-skills",
+      "type": "MCQ",
+      "prompt": "Main idea of a passage is the:",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "options": [
+          "Detail",
+          "Theme",
+          "Quote",
+          "Title"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:english:comprehension:reading-skills:1",
+      "exercise_id": "ex:english:comprehension:reading-skills",
+      "type": "MCQ",
+      "prompt": "An inference is:",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "options": [
+          "A direct quote",
+          "A logical conclusion",
+          "A summary",
+          "An opinion"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:english:comprehension:reading-skills:2",
+      "exercise_id": "ex:english:comprehension:reading-skills",
+      "type": "MCQ",
+      "prompt": "Tone refers to:",
+      "points": 10,
+      "difficulty": "hard",
+      "content": {
+        "options": [
+          "Plot",
+          "Author's attitude",
+          "Setting",
+          "Length"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:english:comprehension:reading-skills:3",
+      "exercise_id": "ex:english:comprehension:reading-skills",
+      "type": "TRANSLATE",
+      "prompt": "Translate to formal English: 'gonna'",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "answer": "going to"
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:english:comprehension:reading-skills:4",
+      "exercise_id": "ex:english:comprehension:reading-skills",
+      "type": "COMPLETE",
+      "prompt": "A short summary of a text is called an ___.",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "blanks": [
+          "abstract"
+        ]
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:general-knowledge:world-capitals:capitals-countries:0",
+      "exercise_id": "ex:general-knowledge:world-capitals:capitals-countries",
+      "type": "MCQ",
+      "prompt": "Capital of Japan:",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "options": [
+          "Seoul",
+          "Beijing",
+          "Tokyo",
+          "Bangkok"
+        ],
+        "correct_index": 2
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:general-knowledge:world-capitals:capitals-countries:1",
+      "exercise_id": "ex:general-knowledge:world-capitals:capitals-countries",
+      "type": "MCQ",
+      "prompt": "Capital of Australia:",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "options": [
+          "Sydney",
+          "Canberra",
+          "Melbourne",
+          "Perth"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:general-knowledge:world-capitals:capitals-countries:2",
+      "exercise_id": "ex:general-knowledge:world-capitals:capitals-countries",
+      "type": "MCQ",
+      "prompt": "Capital of France:",
+      "points": 10,
+      "difficulty": "hard",
+      "content": {
+        "options": [
+          "Lyon",
+          "Nice",
+          "Paris",
+          "Marseille"
+        ],
+        "correct_index": 2
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:general-knowledge:world-capitals:capitals-countries:3",
+      "exercise_id": "ex:general-knowledge:world-capitals:capitals-countries",
+      "type": "MATCH",
+      "prompt": "Match country with capital:",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "left": [
+          "India",
+          "Egypt",
+          "Brazil"
+        ],
+        "right": [
+          "New Delhi",
+          "Cairo",
+          "Brasília"
+        ],
+        "map": {
+          "India": "New Delhi",
+          "Egypt": "Cairo",
+          "Brazil": "Brasília"
+        }
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:general-knowledge:world-capitals:capitals-countries:4",
+      "exercise_id": "ex:general-knowledge:world-capitals:capitals-countries",
+      "type": "COMPLETE",
+      "prompt": "Capital of Canada is ___.",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "blanks": [
+          "Ottawa"
+        ]
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:general-knowledge:science-trivia:discoveries:0",
+      "exercise_id": "ex:general-knowledge:science-trivia:discoveries",
+      "type": "MCQ",
+      "prompt": "Gravity is associated with:",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "options": [
+          "Einstein",
+          "Newton",
+          "Tesla",
+          "Galileo"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:general-knowledge:science-trivia:discoveries:1",
+      "exercise_id": "ex:general-knowledge:science-trivia:discoveries",
+      "type": "MCQ",
+      "prompt": "Penicillin discovered by:",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "options": [
+          "Fleming",
+          "Pasteur",
+          "Curie",
+          "Darwin"
+        ],
+        "correct_index": 0
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:general-knowledge:science-trivia:discoveries:2",
+      "exercise_id": "ex:general-knowledge:science-trivia:discoveries",
+      "type": "MCQ",
+      "prompt": "Theory of evolution by:",
+      "points": 10,
+      "difficulty": "hard",
+      "content": {
+        "options": [
+          "Mendel",
+          "Darwin",
+          "Watson",
+          "Hooke"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:general-knowledge:science-trivia:discoveries:3",
+      "exercise_id": "ex:general-knowledge:science-trivia:discoveries",
+      "type": "REORDER",
+      "prompt": "Earliest first:",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "items": [
+          "Wheel",
+          "Printing press",
+          "Steam engine",
+          "Internet"
+        ],
+        "order": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:general-knowledge:science-trivia:discoveries:4",
+      "exercise_id": "ex:general-knowledge:science-trivia:discoveries",
+      "type": "COMPLETE",
+      "prompt": "First man on the Moon was ___.",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "blanks": [
+          "Neil Armstrong"
+        ]
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:general-knowledge:sports:olympic-sports:0",
+      "exercise_id": "ex:general-knowledge:sports:olympic-sports",
+      "type": "MCQ",
+      "prompt": "Olympics held every:",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "options": [
+          "2 years",
+          "3 years",
+          "4 years",
+          "5 years"
+        ],
+        "correct_index": 2
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:general-knowledge:sports:olympic-sports:1",
+      "exercise_id": "ex:general-knowledge:sports:olympic-sports",
+      "type": "MCQ",
+      "prompt": "FIFA governs:",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "options": [
+          "Cricket",
+          "Football",
+          "Tennis",
+          "Hockey"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:general-knowledge:sports:olympic-sports:2",
+      "exercise_id": "ex:general-knowledge:sports:olympic-sports",
+      "type": "MCQ",
+      "prompt": "Number of players in a cricket team:",
+      "points": 10,
+      "difficulty": "hard",
+      "content": {
+        "options": [
+          "9",
+          "10",
+          "11",
+          "12"
+        ],
+        "correct_index": 2
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:general-knowledge:sports:olympic-sports:3",
+      "exercise_id": "ex:general-knowledge:sports:olympic-sports",
+      "type": "MATCH",
+      "prompt": "Match sport with venue:",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "left": [
+          "Tennis",
+          "Boxing",
+          "Swimming"
+        ],
+        "right": [
+          "Court",
+          "Ring",
+          "Pool"
+        ],
+        "map": {
+          "Tennis": "Court",
+          "Boxing": "Ring",
+          "Swimming": "Pool"
+        }
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:general-knowledge:sports:olympic-sports:4",
+      "exercise_id": "ex:general-knowledge:sports:olympic-sports",
+      "type": "COMPLETE",
+      "prompt": "Cricket originated in ___.",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "blanks": [
+          "England"
+        ]
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:reasoning:verbal-reasoning:series-analogy:0",
+      "exercise_id": "ex:reasoning:verbal-reasoning:series-analogy",
+      "type": "MCQ",
+      "prompt": "Find next: 2, 4, 8, 16, ?",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "options": [
+          "18",
+          "20",
+          "32",
+          "24"
+        ],
+        "correct_index": 2
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:reasoning:verbal-reasoning:series-analogy:1",
+      "exercise_id": "ex:reasoning:verbal-reasoning:series-analogy",
+      "type": "MCQ",
+      "prompt": "Cat:Kitten :: Dog:?",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "options": [
+          "Cub",
+          "Puppy",
+          "Calf",
+          "Foal"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:reasoning:verbal-reasoning:series-analogy:2",
+      "exercise_id": "ex:reasoning:verbal-reasoning:series-analogy",
+      "type": "MCQ",
+      "prompt": "Odd one out:",
+      "points": 10,
+      "difficulty": "hard",
+      "content": {
+        "options": [
+          "Apple",
+          "Mango",
+          "Carrot",
+          "Banana"
+        ],
+        "correct_index": 2
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:reasoning:verbal-reasoning:series-analogy:3",
+      "exercise_id": "ex:reasoning:verbal-reasoning:series-analogy",
+      "type": "REORDER",
+      "prompt": "Order by size (smallest first):",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "items": [
+          "Ant",
+          "Cat",
+          "Dog",
+          "Elephant"
+        ],
+        "order": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:reasoning:verbal-reasoning:series-analogy:4",
+      "exercise_id": "ex:reasoning:verbal-reasoning:series-analogy",
+      "type": "COMPLETE",
+      "prompt": "If MONDAY=2, then SUNDAY=___.",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "blanks": [
+          "1"
+        ]
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:reasoning:non-verbal:patterns:0",
+      "exercise_id": "ex:reasoning:non-verbal:patterns",
+      "type": "MCQ",
+      "prompt": "Which shape has 6 sides?",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "options": [
+          "Pentagon",
+          "Hexagon",
+          "Octagon",
+          "Heptagon"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:reasoning:non-verbal:patterns:1",
+      "exercise_id": "ex:reasoning:non-verbal:patterns",
+      "type": "MCQ",
+      "prompt": "Mirror image of 'b' is:",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "options": [
+          "d",
+          "p",
+          "q",
+          "b"
+        ],
+        "correct_index": 0
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:reasoning:non-verbal:patterns:2",
+      "exercise_id": "ex:reasoning:non-verbal:patterns",
+      "type": "MCQ",
+      "prompt": "Cube has ___ faces.",
+      "points": 10,
+      "difficulty": "hard",
+      "content": {
+        "options": [
+          "4",
+          "6",
+          "8",
+          "12"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:reasoning:non-verbal:patterns:3",
+      "exercise_id": "ex:reasoning:non-verbal:patterns",
+      "type": "MATCH",
+      "prompt": "Match shape with sides:",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "left": [
+          "Triangle",
+          "Square",
+          "Pentagon"
+        ],
+        "right": [
+          "3",
+          "4",
+          "5"
+        ],
+        "map": {
+          "Triangle": "3",
+          "Square": "4",
+          "Pentagon": "5"
+        }
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:reasoning:non-verbal:patterns:4",
+      "exercise_id": "ex:reasoning:non-verbal:patterns",
+      "type": "COMPLETE",
+      "prompt": "A circle has ___ sides.",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "blanks": [
+          "0"
+        ]
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:reasoning:logical-puzzles:direction-blood-relation:0",
+      "exercise_id": "ex:reasoning:logical-puzzles:direction-blood-relation",
+      "type": "MCQ",
+      "prompt": "Facing north, turn 180°: now facing:",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "options": [
+          "East",
+          "West",
+          "South",
+          "North"
+        ],
+        "correct_index": 2
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:reasoning:logical-puzzles:direction-blood-relation:1",
+      "exercise_id": "ex:reasoning:logical-puzzles:direction-blood-relation",
+      "type": "MCQ",
+      "prompt": "My father's sister is my:",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "options": [
+          "Aunt",
+          "Cousin",
+          "Niece",
+          "Mother"
+        ],
+        "correct_index": 0
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:reasoning:logical-puzzles:direction-blood-relation:2",
+      "exercise_id": "ex:reasoning:logical-puzzles:direction-blood-relation",
+      "type": "MCQ",
+      "prompt": "Sun rises in the:",
+      "points": 10,
+      "difficulty": "hard",
+      "content": {
+        "options": [
+          "North",
+          "South",
+          "East",
+          "West"
+        ],
+        "correct_index": 2
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:reasoning:logical-puzzles:direction-blood-relation:3",
+      "exercise_id": "ex:reasoning:logical-puzzles:direction-blood-relation",
+      "type": "REORDER",
+      "prompt": "Compass clockwise from N:",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "items": [
+          "N",
+          "E",
+          "S",
+          "W"
+        ],
+        "order": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:reasoning:logical-puzzles:direction-blood-relation:4",
+      "exercise_id": "ex:reasoning:logical-puzzles:direction-blood-relation",
+      "type": "COMPLETE",
+      "prompt": "Opposite of 'up' is ___.",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "blanks": [
+          "down"
+        ]
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:history:ancient-history:indus-valley-beyond:0",
+      "exercise_id": "ex:history:ancient-history:indus-valley-beyond",
+      "type": "MCQ",
+      "prompt": "Indus Valley civilization site:",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "options": [
+          "Harappa",
+          "Pataliputra",
+          "Ujjain",
+          "Vijayanagara"
+        ],
+        "correct_index": 0
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:history:ancient-history:indus-valley-beyond:1",
+      "exercise_id": "ex:history:ancient-history:indus-valley-beyond",
+      "type": "MCQ",
+      "prompt": "Author of Arthashastra:",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "options": [
+          "Kalidasa",
+          "Chanakya",
+          "Tulsidas",
+          "Aryabhata"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:history:ancient-history:indus-valley-beyond:2",
+      "exercise_id": "ex:history:ancient-history:indus-valley-beyond",
+      "type": "MCQ",
+      "prompt": "Buddha attained enlightenment at:",
+      "points": 10,
+      "difficulty": "hard",
+      "content": {
+        "options": [
+          "Lumbini",
+          "Bodh Gaya",
+          "Sarnath",
+          "Kushinagar"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:history:ancient-history:indus-valley-beyond:3",
+      "exercise_id": "ex:history:ancient-history:indus-valley-beyond",
+      "type": "MATCH",
+      "prompt": "Match dynasty with founder:",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "left": [
+          "Maurya",
+          "Gupta",
+          "Mughal"
+        ],
+        "right": [
+          "Chandragupta",
+          "Sri Gupta",
+          "Babur"
+        ],
+        "map": {
+          "Maurya": "Chandragupta",
+          "Gupta": "Sri Gupta",
+          "Mughal": "Babur"
+        }
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:history:ancient-history:indus-valley-beyond:4",
+      "exercise_id": "ex:history:ancient-history:indus-valley-beyond",
+      "type": "COMPLETE",
+      "prompt": "Ashoka belonged to the ___ dynasty.",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "blanks": [
+          "Maurya"
+        ]
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:history:medieval-history:sultanates-mughals:0",
+      "exercise_id": "ex:history:medieval-history:sultanates-mughals",
+      "type": "MCQ",
+      "prompt": "First Mughal emperor:",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "options": [
+          "Akbar",
+          "Babur",
+          "Humayun",
+          "Shah Jahan"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:history:medieval-history:sultanates-mughals:1",
+      "exercise_id": "ex:history:medieval-history:sultanates-mughals",
+      "type": "MCQ",
+      "prompt": "Taj Mahal built by:",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "options": [
+          "Akbar",
+          "Babur",
+          "Shah Jahan",
+          "Aurangzeb"
+        ],
+        "correct_index": 2
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:history:medieval-history:sultanates-mughals:2",
+      "exercise_id": "ex:history:medieval-history:sultanates-mughals",
+      "type": "MCQ",
+      "prompt": "Battle of Panipat (1st) year:",
+      "points": 10,
+      "difficulty": "hard",
+      "content": {
+        "options": [
+          "1526",
+          "1556",
+          "1761",
+          "1857"
+        ],
+        "correct_index": 0
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:history:medieval-history:sultanates-mughals:3",
+      "exercise_id": "ex:history:medieval-history:sultanates-mughals",
+      "type": "REORDER",
+      "prompt": "Mughals chronological:",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "items": [
+          "Babur",
+          "Humayun",
+          "Akbar",
+          "Jahangir"
+        ],
+        "order": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:history:medieval-history:sultanates-mughals:4",
+      "exercise_id": "ex:history:medieval-history:sultanates-mughals",
+      "type": "COMPLETE",
+      "prompt": "Akbar's capital was ___.",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "blanks": [
+          "Fatehpur Sikri"
+        ]
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:history:modern-history:freedom-movement:0",
+      "exercise_id": "ex:history:modern-history:freedom-movement",
+      "type": "MCQ",
+      "prompt": "Year of Indian independence:",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "options": [
+          "1942",
+          "1945",
+          "1947",
+          "1950"
+        ],
+        "correct_index": 2
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:history:modern-history:freedom-movement:1",
+      "exercise_id": "ex:history:modern-history:freedom-movement",
+      "type": "MCQ",
+      "prompt": "Father of the Nation:",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "options": [
+          "Nehru",
+          "Gandhi",
+          "Patel",
+          "Bose"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:history:modern-history:freedom-movement:2",
+      "exercise_id": "ex:history:modern-history:freedom-movement",
+      "type": "MCQ",
+      "prompt": "Quit India movement year:",
+      "points": 10,
+      "difficulty": "hard",
+      "content": {
+        "options": [
+          "1919",
+          "1930",
+          "1942",
+          "1946"
+        ],
+        "correct_index": 2
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:history:modern-history:freedom-movement:3",
+      "exercise_id": "ex:history:modern-history:freedom-movement",
+      "type": "MATCH",
+      "prompt": "Match leader with movement:",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "left": [
+          "Gandhi",
+          "Bose",
+          "Bhagat Singh"
+        ],
+        "right": [
+          "Non-cooperation",
+          "INA",
+          "HSRA"
+        ],
+        "map": {
+          "Gandhi": "Non-cooperation",
+          "Bose": "INA",
+          "Bhagat Singh": "HSRA"
+        }
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:history:modern-history:freedom-movement:4",
+      "exercise_id": "ex:history:modern-history:freedom-movement",
+      "type": "COMPLETE",
+      "prompt": "First PM of India was ___.",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "blanks": [
+          "Jawaharlal Nehru"
+        ]
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:geography:physical-geography:earth-atmosphere:0",
+      "exercise_id": "ex:geography:physical-geography:earth-atmosphere",
+      "type": "MCQ",
+      "prompt": "Largest ocean:",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "options": [
+          "Atlantic",
+          "Indian",
+          "Arctic",
+          "Pacific"
+        ],
+        "correct_index": 3
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:geography:physical-geography:earth-atmosphere:1",
+      "exercise_id": "ex:geography:physical-geography:earth-atmosphere",
+      "type": "MCQ",
+      "prompt": "Layer we live in:",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "options": [
+          "Stratosphere",
+          "Troposphere",
+          "Mesosphere",
+          "Thermosphere"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:geography:physical-geography:earth-atmosphere:2",
+      "exercise_id": "ex:geography:physical-geography:earth-atmosphere",
+      "type": "MCQ",
+      "prompt": "Earth's shape is:",
+      "points": 10,
+      "difficulty": "hard",
+      "content": {
+        "options": [
+          "Sphere",
+          "Oblate spheroid",
+          "Cube",
+          "Disk"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:geography:physical-geography:earth-atmosphere:3",
+      "exercise_id": "ex:geography:physical-geography:earth-atmosphere",
+      "type": "REORDER",
+      "prompt": "Atmosphere layers (low→high):",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "items": [
+          "Troposphere",
+          "Stratosphere",
+          "Mesosphere",
+          "Thermosphere"
+        ],
+        "order": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:geography:physical-geography:earth-atmosphere:4",
+      "exercise_id": "ex:geography:physical-geography:earth-atmosphere",
+      "type": "COMPLETE",
+      "prompt": "Earth has ___ continents.",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "blanks": [
+          "7"
+        ]
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:geography:world-geography:rivers-mountains:0",
+      "exercise_id": "ex:geography:world-geography:rivers-mountains",
+      "type": "MCQ",
+      "prompt": "Longest river:",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "options": [
+          "Amazon",
+          "Nile",
+          "Yangtze",
+          "Ganga"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:geography:world-geography:rivers-mountains:1",
+      "exercise_id": "ex:geography:world-geography:rivers-mountains",
+      "type": "MCQ",
+      "prompt": "Highest peak:",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "options": [
+          "K2",
+          "Everest",
+          "Kanchenjunga",
+          "Lhotse"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:geography:world-geography:rivers-mountains:2",
+      "exercise_id": "ex:geography:world-geography:rivers-mountains",
+      "type": "MCQ",
+      "prompt": "Sahara is a:",
+      "points": 10,
+      "difficulty": "hard",
+      "content": {
+        "options": [
+          "Forest",
+          "Desert",
+          "Plateau",
+          "Plain"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:geography:world-geography:rivers-mountains:3",
+      "exercise_id": "ex:geography:world-geography:rivers-mountains",
+      "type": "MATCH",
+      "prompt": "Match river to country:",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "left": [
+          "Nile",
+          "Amazon",
+          "Ganga"
+        ],
+        "right": [
+          "Egypt",
+          "Brazil",
+          "India"
+        ],
+        "map": {
+          "Nile": "Egypt",
+          "Amazon": "Brazil",
+          "Ganga": "India"
+        }
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:geography:world-geography:rivers-mountains:4",
+      "exercise_id": "ex:geography:world-geography:rivers-mountains",
+      "type": "COMPLETE",
+      "prompt": "Mt. Everest lies in the ___ range.",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "blanks": [
+          "Himalaya"
+        ]
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:geography:indian-geography:states-rivers:0",
+      "exercise_id": "ex:geography:indian-geography:states-rivers",
+      "type": "MCQ",
+      "prompt": "Largest Indian state by area:",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "options": [
+          "Maharashtra",
+          "Rajasthan",
+          "Madhya Pradesh",
+          "UP"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:geography:indian-geography:states-rivers:1",
+      "exercise_id": "ex:geography:indian-geography:states-rivers",
+      "type": "MCQ",
+      "prompt": "Capital of Karnataka:",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "options": [
+          "Mysore",
+          "Bengaluru",
+          "Mangalore",
+          "Hubli"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:geography:indian-geography:states-rivers:2",
+      "exercise_id": "ex:geography:indian-geography:states-rivers",
+      "type": "MCQ",
+      "prompt": "Tropic of Cancer passes through how many Indian states:",
+      "points": 10,
+      "difficulty": "hard",
+      "content": {
+        "options": [
+          "6",
+          "8",
+          "10",
+          "12"
+        ],
+        "correct_index": 1
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:geography:indian-geography:states-rivers:3",
+      "exercise_id": "ex:geography:indian-geography:states-rivers",
+      "type": "REORDER",
+      "prompt": "Rivers from north to south:",
+      "points": 10,
+      "difficulty": "easy",
+      "content": {
+        "items": [
+          "Ganga",
+          "Narmada",
+          "Krishna",
+          "Kaveri"
+        ],
+        "order": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "explanation": null
+    },
+    {
+      "id": "q:geography:indian-geography:states-rivers:4",
+      "exercise_id": "ex:geography:indian-geography:states-rivers",
+      "type": "COMPLETE",
+      "prompt": "India has ___ Union Territories (as of 2024).",
+      "points": 10,
+      "difficulty": "medium",
+      "content": {
+        "blanks": [
+          "8"
+        ]
+      },
+      "explanation": null
+    }
+  ]
+}
