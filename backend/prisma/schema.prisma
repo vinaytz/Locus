@@ -1,4 +1,4 @@
-// Locus backend Prisma schema (SQLite)
+// Locus backend Prisma schema (PostgreSQL)
 // Implements:
 //  - Auth (User)
 //  - Courses (Exam, Subject, Unit, Exercise, Question) — schema based on
@@ -7,16 +7,15 @@
 //  - Gamification (UserStats, ExerciseAttempt, DiamondLedger)
 //  - Leaderboard (LeaderboardGroup, LeaderboardParticipant)
 //
-// SQLite has no JSONB or arrays, so:
-//  - Question.content is TEXT (JSON-stringified payload)
-//  - Enums are modelled as String + CHECK-equivalent in code
+// Question.content is stored as TEXT (JSON-stringified payload) to keep
+// application code simple and stable across DB providers.
 
 generator client {
   provider = "prisma-client-js"
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
@@ -40,18 +39,18 @@ model User {
 
 // ---------- COURSES --------------------------------------------------------
 model Subject {
-  id          String  @id @default(cuid())
-  slug        String  @unique
-  name        String                       // base name e.g. "Physics"
-  level       Int                          // 1=foundation, 2=intermediate, 3=advanced
-  displayName String                       // "Physics 1"
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  name        String // base name e.g. "Physics"
+  level       Int // 1=foundation, 2=intermediate, 3=advanced
+  displayName String // "Physics 1"
   icon        String?
   description String?
   createdAt   DateTime @default(now())
 
-  units             Unit[]
-  examLinks         ExamSubject[]
-  enrollments       UserSubjectEnrollment[]
+  units       Unit[]
+  examLinks   ExamSubject[]
+  enrollments UserSubjectEnrollment[]
 
   @@unique([name, level])
   @@index([level])
@@ -74,8 +73,8 @@ model Exercise {
   id         String @id @default(cuid())
   unitId     String
   title      String
-  duration   Int    @default(5)   // minutes
-  points     Int    @default(20)  // base XP awarded on completion
+  duration   Int    @default(5) // minutes
+  points     Int    @default(20) // base XP awarded on completion
   orderIndex Int    @default(0)
 
   unit      Unit              @relation(fields: [unitId], references: [id], onDelete: Cascade)
@@ -86,12 +85,12 @@ model Exercise {
 }
 
 model Question {
-  id          String @id @default(cuid())
+  id          String  @id @default(cuid())
   exerciseId  String
-  type        String  // 'MCQ' | 'MATCH' | 'REORDER' | 'COMPLETE' | 'TRANSLATE'
+  type        String // 'MCQ' | 'MATCH' | 'REORDER' | 'COMPLETE' | 'TRANSLATE'
   prompt      String
-  difficulty  String @default("easy")  // easy | medium | hard
-  points      Int    @default(10)
+  difficulty  String  @default("easy") // easy | medium | hard
+  points      Int     @default(10)
   content     String // JSON-stringified payload
   explanation String?
 
@@ -102,8 +101,8 @@ model Question {
 }
 
 model Exam {
-  id          String  @id @default(cuid())
-  slug        String  @unique
+  id          String   @id @default(cuid())
+  slug        String   @unique
   title       String
   description String?
   createdAt   DateTime @default(now())
@@ -115,7 +114,7 @@ model Exam {
 model ExamSubject {
   examId     String
   subjectId  String
-  orderIndex Int     @default(0)
+  orderIndex Int    @default(0)
 
   exam    Exam    @relation(fields: [examId], references: [id], onDelete: Cascade)
   subject Subject @relation(fields: [subjectId], references: [id], onDelete: Cascade)
@@ -146,7 +145,7 @@ model UserSubjectEnrollment {
   id         String   @id @default(cuid())
   userId     String
   subjectId  String
-  difficulty Int      // 1 = enjoy, 2 = pro, 3 = expert
+  difficulty Int // 1 = enjoy, 2 = pro, 3 = expert
   createdAt  DateTime @default(now())
 
   user    User    @relation(fields: [userId], references: [id], onDelete: Cascade)
@@ -158,32 +157,32 @@ model UserSubjectEnrollment {
 
 // ---------- GAMIFICATION ---------------------------------------------------
 model UserStats {
-  userId             String   @id
-  totalXp            Int      @default(0)
-  diamonds           Int      @default(0)
-  hearts             Int      @default(5)   // 0..MAX_HEARTS (gameplay lives)
-  lastHeartRefillAt  DateTime?              // anchor for time-based regen (null when full)
-  currentLeagueIndex Int      @default(1)   // 1..30
-  currentStreak      Int      @default(0)
-  longestStreak      Int      @default(0)
-  lastActivityDate   DateTime?              // Date-only conceptually (UTC midnight per user TZ)
-  updatedAt          DateTime @updatedAt
+  userId             String    @id
+  totalXp            Int       @default(0)
+  diamonds           Int       @default(0)
+  hearts             Int       @default(5) // 0..MAX_HEARTS (gameplay lives)
+  lastHeartRefillAt  DateTime? // anchor for time-based regen (null when full)
+  currentLeagueIndex Int       @default(1) // 1..30
+  currentStreak      Int       @default(0)
+  longestStreak      Int       @default(0)
+  lastActivityDate   DateTime? // Date-only conceptually (UTC midnight per user TZ)
+  updatedAt          DateTime  @updatedAt
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
 
 // Records each exercise completion for analytics + perfect-score detection.
 model ExerciseAttempt {
-  id            String   @id @default(cuid())
-  userId        String
-  exerciseId    String
-  correctCount  Int
-  totalCount    Int
-  scorePct      Int      // 0..100
-  xpAwarded     Int
-  diamondsAwarded Int    @default(0)
-  isPerfect     Boolean
-  createdAt     DateTime @default(now())
+  id              String   @id @default(cuid())
+  userId          String
+  exerciseId      String
+  correctCount    Int
+  totalCount      Int
+  scorePct        Int // 0..100
+  xpAwarded       Int
+  diamondsAwarded Int      @default(0)
+  isPerfect       Boolean
+  createdAt       DateTime @default(now())
 
   user     User     @relation(fields: [userId], references: [id], onDelete: Cascade)
   exercise Exercise @relation(fields: [exerciseId], references: [id], onDelete: Cascade)
@@ -195,9 +194,9 @@ model ExerciseAttempt {
 model DiamondLedger {
   id        String   @id @default(cuid())
   userId    String
-  delta     Int                              // +/- diamonds
-  reason    String                           // 'UNIT_COMPLETION' | 'STREAK_7' | 'PURCHASE' | ...
-  refId     String?                          // optional FK target id (unit, etc.)
+  delta     Int // +/- diamonds
+  reason    String // 'UNIT_COMPLETION' | 'STREAK_7' | 'PURCHASE' | ...
+  refId     String? // optional FK target id (unit, etc.)
   createdAt DateTime @default(now())
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
@@ -207,14 +206,14 @@ model DiamondLedger {
 
 // ---------- LEADERBOARD ----------------------------------------------------
 model LeaderboardGroup {
-  id          String   @id @default(cuid())
-  leagueTier  Int      // 1..30
-  state       String   @default("WAITING")   // WAITING | ACTIVE | CLOSED
-  capacity    Int      @default(12)
-  filledCount Int      @default(0)
+  id          String    @id @default(cuid())
+  leagueTier  Int // 1..30
+  state       String    @default("WAITING") // WAITING | ACTIVE | CLOSED
+  capacity    Int       @default(12)
+  filledCount Int       @default(0)
   startedAt   DateTime?
   endsAt      DateTime?
-  createdAt   DateTime @default(now())
+  createdAt   DateTime  @default(now())
 
   participants LeaderboardParticipant[]
 
@@ -222,12 +221,12 @@ model LeaderboardGroup {
 }
 
 model LeaderboardParticipant {
-  id         String   @id @default(cuid())
-  groupId    String
-  userId     String
-  seasonXp   Int      @default(0)
-  joinedAt   DateTime @default(now())
-  lastXpAt   DateTime?
+  id       String    @id @default(cuid())
+  groupId  String
+  userId   String
+  seasonXp Int       @default(0)
+  joinedAt DateTime  @default(now())
+  lastXpAt DateTime?
 
   group LeaderboardGroup @relation(fields: [groupId], references: [id], onDelete: Cascade)
   user  User             @relation(fields: [userId], references: [id], onDelete: Cascade)
