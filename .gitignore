@@ -4,6 +4,8 @@ UI_Examples
 node_modules/
 dist/
 build/
+*.env
+**/.envgit rm --cached .env
 .env.local
 .env.development.local
 .env.test.local
