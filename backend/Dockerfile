@@ -31,7 +31,7 @@ COPY --from=builder /app/prisma ./prisma
 COPY package*.json ./
 COPY tsconfig.json ./
 # Install ts-node globally so `npm run seed` works inside the container.
-RUN npm install -g ts-node typescript
+RUN npm install -g ts-node@10.9.2 typescript@5.5.4
 
 EXPOSE 3000
 ENTRYPOINT ["/sbin/tini", "--"]
