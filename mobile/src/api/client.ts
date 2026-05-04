@@ -1,4 +1,5 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import Constants from 'expo-constants';
 import type {
   AuthResponse,
   CompleteExerciseResponse,
@@ -16,8 +17,11 @@ import type {
 
 const TOKEN_KEY = 'locus:token';
 
-const BASE_URL =
-  (process.env.EXPO_PUBLIC_API_URL ?? '').replace(/\/$/, '') || 'http://localhost:3000/api';
+const BASE_URL = (
+  (process.env.EXPO_PUBLIC_API_URL as string | undefined) ||
+  ((Constants.expoConfig?.extra as { apiUrl?: string } | undefined)?.apiUrl) ||
+  'http://144.126.255.209:3001/api'
+).replace(/\/$/, '');
 
 export class ApiError extends Error {
   status: number;

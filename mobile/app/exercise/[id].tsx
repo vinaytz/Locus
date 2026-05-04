@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { ActivityIndicator, Alert, Pressable, StyleSheet, Text, View } from 'react-native';
+import { ActivityIndicator, Alert, Pressable, StyleSheet, Text, View, Vibration } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
@@ -40,6 +40,11 @@ export default function ExerciseScreen() {
       })
       .catch((err) => setError(err?.message ?? 'Failed to load'));
   }, [id]);
+
+  // Celebratory vibration when the lesson finishes.
+  useEffect(() => {
+    if (done) Vibration.vibrate([0, 80, 60, 80, 60, 160]);
+  }, [done]);
 
   // Hard gate: out of hearts → show full-screen wait/refill UI.
   if (hearts === 0 && !done) {
@@ -83,7 +88,11 @@ export default function ExerciseScreen() {
     setFeedback(correct ? 'correct' : 'wrong');
     setCorrectAnswer(answer ?? null);
     setResults((r) => [...r, correct]);
-    if (!correct) loseHeart();
+    if (!correct) {
+      // Short "buzz" pattern for a wrong answer.
+      Vibration.vibrate([0, 60, 40, 80]);
+      loseHeart();
+    }
   };
 
   const next = async () => {

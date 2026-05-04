@@ -20,7 +20,7 @@ export class AuthService {
         passwordHash,
         displayName: dto.displayName,
         timezone: dto.timezone ?? 'UTC',
-        stats: { create: {} },
+        stats: { create: { diamonds: 100 } },
       },
       include: { stats: true },
     });

@@ -29,5 +29,8 @@ export async function middleware(req: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/((?!_next/static|_next/image|favicon.ico).*)'],
+  // Exclude Next internals AND any request that has a file extension (png, ico,
+  // svg, css, js, woff…). This makes /logo.png and other /public assets bypass
+  // the auth gate so they load on the login screen too.
+  matcher: ['/((?!_next/static|_next/image|favicon.ico|.*\\..*).*)'],
 };

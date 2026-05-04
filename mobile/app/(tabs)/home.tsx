@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { ActivityIndicator, RefreshControl, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { useFocusEffect, useRouter } from 'expo-router';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -43,6 +43,16 @@ export default function HomeScreen() {
   useFocusEffect(useCallback(() => {
     if (activeSubjectId) loadAll(activeSubjectId);
   }, [activeSubjectId, loadAll]));
+
+  // Also reload eagerly when the user picks a different course from TopNav while
+  // already on this screen (focus doesn't change in that case).
+  useEffect(() => {
+    if (activeSubjectId) {
+      // Clear stale subject so the previous course's units don't flash.
+      setSubject(null);
+      loadAll(activeSubjectId);
+    }
+  }, [activeSubjectId, loadAll]);
 
   const onRefresh = async () => {
     setRefreshing(true);

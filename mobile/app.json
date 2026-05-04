@@ -22,7 +22,8 @@
     },
     "android": {
       "package": "com.Locus",
-      "versionCode": 5,
+      "versionCode": 8,
+      "usesCleartextTraffic": true,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#131F24"
@@ -44,7 +45,8 @@
       },
       "eas": {
         "projectId": "ad8e8ec1-134d-4d5a-a72b-4eae108dff28"
-      }
+      },
+      "apiUrl": "http://144.126.255.209:3001/api"
     },
     "owner": "vinaytz"
   }

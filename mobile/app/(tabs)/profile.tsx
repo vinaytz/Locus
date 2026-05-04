@@ -122,7 +122,14 @@ export default function ProfileScreen() {
         </View>
 
         <View style={styles.section}>
-          <DuoButton label="Log out" variant="danger" onPress={signOut} />
+          <DuoButton
+            label="Log out"
+            variant="danger"
+            onPress={async () => {
+              await signOut();
+              router.replace('/auth');
+            }}
+          />
         </View>
       </ScrollView>
     </SafeAreaView>
